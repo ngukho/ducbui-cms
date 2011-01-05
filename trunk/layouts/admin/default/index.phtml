@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<? echo $this->headTitle(); ?>
+<? echo $this->jQuery(); ?>
+<? echo $this->headLink(); ?>
+<? echo $this->headScript(); ?>
+
+</head>
+<body>
+
+<div id="wrapper">
+
+	<? echo $this->RenderAdminHeader(); ?>
+	
+	<? echo $this->RenderAdminMainMenu(); ?>
+	
+	<table id="page-body" width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tr class="page_content">
+	
+		<td id="left">
+				<? echo $this->layout()->tpl_LeftContent; ?>	
+		<!-- END id="left" -->			  
+		</td>
+		
+		
+		<td id="right">
+			<div class="right-content">
+				<? echo $this->placeholder('Digitalus')->tpl_RightTitle; ?>	
+				
+				<div align="center"><? echo $this->RenderAlert(); ?></div>
+				
+				<? echo $this->layout()->content; ?>
+			<!-- END class="right-content" -->
+			</div>		
+		<!-- END id="right" -->			  
+		</td>
+		
+	<!-- END class="page_content" -->		
+	</tr>
+	<!-- END id="page-body" -->
+	</table>	
+	
+	<? echo $this->RenderAdminFooter(); ?>
+
+
+<!-- END id="wrapper" -->
+</div>
+
+<div id='waiting'></div>
+
+<script type="text/javascript">
+	var menu=new menu.dd("menu");
+	menu.init("menu","menuhover");
+</script>
+
+<!--	
+	Cau truc site
+	
+	<div id="wrapper">
+		<div id="page-header"></div>
+		<div id="main_menu"></div>
+		<table id="page-body">
+			<tr id="page-content">
+				<td id="left">
+					<div class="left-content">
+						Noi dung
+					</div>
+				</td>
+				<td id="righr">
+					<div class="right-content">
+						Noi dung
+					</div>
+				</td>
+			</tr>
+		</table>
+		<div id="footer"><p>©</p></div>
+	</div>	
+
+-->
+
+</body>
+</html>

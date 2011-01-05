@@ -1,0 +1,127 @@
+<? echo $this->render("category-product/_header.phtml"); ?>
+
+<form action="<?= $this->currentControllerUrl; ?>/delete-all" id="frmData" name="frmData" method="POST" onsubmit="return CheckDeleteAll();">
+
+<div class="box-content">
+	<span style="font-size:13px;font-weight:bold;"><?= $this->breadCrumbs; ?></span>
+</div>
+
+<div class="box-content" style="padding:4px 0px;">
+	
+	<div class="floatRight">
+		<a href="<?= $this->currentModuleUrl . '/category/add/cPath/' . $this->cPath . '/cId/' . $this->cId; ?>" class="btn_green folder_act">
+			<?= $this->getTranslation('Add New Category'); ?>
+		</a>
+		
+		<?php
+			// Thu muc root khong cho hien 'Add new product'
+			if($this->cId != 0) :
+		?>
+			<a href="#" onclick="javascript:addNewProduct('<?= $this->currentModuleUrl; ?>/product/add');" class="btn_green page_act">
+				<?= $this->getTranslation('Add New Product'); ?>
+			</a>
+			<?= $this->selProductTypes; ?>
+		<?	endif;	?>	
+	</div>
+	Go : <?= $this->showSelectCats('sel_category',$this->t('/ TOP'),$this->cId,array("onchange" => "javascript:location.href = \"{$this->currentActionUrl}/cId/\" + this.value;")); ?>
+</div>
+
+<div class="box-content">
+
+	<table id="show_data" width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<th width="2%" align="center">#</th>
+		<th style="text-align:left;" width=""><?= $this->nameTX ?></th>
+		<th style="text-align:left;" width="20%"><?= $this->t('Model'); ?></th>
+		<th style="text-align:right;" width="6%"><?= $this->t('Price'); ?></th>
+		<th style="text-align:right;" width="8%"><?= $this->t('Quantity'); ?></th>
+		<th style="text-align:right;" width="6%"><?= $this->orderTX; ?></th>
+		<th style="text-align:right;" width="8%"><?= $this->t('Action'); ?></a></th>
+	</tr>
+	<?
+		$i=1;
+		foreach($this->rsCats as $rowCat) :
+			if($this->cPath == null)
+				$cPath = $rowCat->cat_id;
+			else 
+				$cPath = $this->cPath . '_' . $rowCat->cat_id;							
+	?>
+		<tr class="<?= ($i==1)?' rowBlue_01':'rowBlue_02'; ?>" style="cursor:pointer;" onclick="location.href = '<?= $this->currentActionUrl . '/cPath/' . $cPath . '/cId/' . $rowCat->cat_id; ?>'">
+			<td align="center">
+				<?= $rowCat->cat_id; ?>
+			</td>
+			<td>
+				<span class="image_folder"></span><strong><?= $this->h($rowCat->name); ?></strong>
+			</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td align="right"><?= $rowCat->order; ?></td>
+			<td align="right">
+				<?= $this->renderStatusLink($rowCat->cat_id,$this->currentModuleUrl . '/category/switch-status/cPath/' . $this->cPath . '/cId/' . $rowCat->cat_id,$rowCat->active,false); ?>
+				<?= $this->renderEditLink($this->currentModuleUrl . '/category/edit/cPath/' . $this->cPath . '/cId/' . $rowCat->cat_id); ?>
+				<?= $this->renderDeleteLink($this->currentModuleUrl . '/category/delete/cPath/' . $this->cPath . '/cId/' . $rowCat->cat_id); ?>
+			</td>
+		</tr>
+						
+	<? 
+			$i=-$i;
+		endforeach;
+		
+		// Show Products
+		foreach($this->rsProducts as $rowProduct) :
+	?>			
+		<tr class="<?= ($i==1)?' rowBlue_01':'rowBlue_02'; ?>" style="cursor:pointer;" onclick="location.href = '<?= $this->currentModuleUrl . '/product/edit/cPath/' . $this->cPath . '/cId/' . $this->cId . '/pId/' . $rowProduct->product_id; ?>'">
+			<td align="center">
+				<?= $rowProduct->product_id; ?>
+			</td>
+			<td>
+				<a href="<?= $this->currentModuleUrl . '/product/preview/cPath/' . $this->cPath . '/cId/' . $this->cId . '/product_id/' . $rowProduct->product_id; ?>" title="<?= $this->t('Preview') ;?>"><span class="image_preview"></span></a>
+				<?= $this->h($rowProduct->name); ?>
+			</td>
+			<td align="left"><?= $this->h($rowProduct->model); ?></td>
+			<td align="right"><?= $this->FormatCurrency($rowProduct->price); ?></td>
+			<td align="right"><?= $rowProduct->quantity; ?></td>
+			<td align="right"><?= $rowProduct->order; ?></td>
+			<td align="right">
+				<?php
+					if($rowProduct->master_cat_id != $this->cId)
+					{
+						// The hien link san pham
+						echo 'Yes';
+					}
+				?>
+				<?= $this->renderStatusLink($rowProduct->product_id,$this->currentModuleUrl . '/product/switch-status/cPath/' . $this->cPath . '/cId/' . $this->cId . '/pId/' . $rowProduct->product_id,$rowProduct->active,false); ?>
+				<?= $this->renderEditLink($this->currentModuleUrl . '/product/edit/cPath/' . $this->cPath . '/cId/' . $this->cId . '/pId/' . $rowProduct->product_id); ?>				
+				<?= $this->renderDeleteLink($this->currentModuleUrl . '/product/delete/cPath/' . $this->cPath . '/cId/' . $this->cId . '/pId/' . $rowProduct->product_id); ?>				
+
+			</td>
+		</tr>
+	<? 
+			$i=-$i;
+		endforeach;
+	?>			
+	
+	</table>		
+
+</div>
+
+<div class="box-content" >
+	<?= $this->strPaging; ?>
+</div>
+
+</form>
+
+<script language="JavaScript">
+
+function changeCategory(id)
+{
+	location.href = '<?= $this->currentActionUrl . '/cPath/' . $this->cPath . '/cId/'; ?>' + id;	
+}
+function addNewProduct(url)
+{
+	type_id = $(":input#type_id option:selected").val();        
+	location.href = url +  '<?= '/cPath/' . $this->cPath . '/cId/' . $this->cId . '/type_id/'; ?>' + type_id;	
+}
+
+</script>

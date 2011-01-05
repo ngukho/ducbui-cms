@@ -1,0 +1,47 @@
+	<div id="main_menu">
+
+		<ul class="menu" id="menu">
+			<li>
+				<a href="<?= BASE_URL ?>/admin" class="menulink">HOME</a>
+			</li>
+		
+			<li>
+				<a href="javascript:void(0)" class="menulink">USERS</a>
+				<ul>
+					<li>
+						<a href="javascript:void(0)" class="sub">Users</a>
+						<ul>
+							<li class="topline"><a href="<?= BASE_URL ?>/admin/user">User List</a></li>
+							<li><a href="<?= BASE_URL ?>/admin/user/add">New User</a></li>
+						</ul>					
+					
+					</li>
+					<li>
+						<a href="javascript:void(0)" class="sub">Groups</a>
+						<ul>
+							<li class="topline"><a href="<?= BASE_URL ?>/admin/group">Group List</a></li>
+							<li><a href="<?= BASE_URL ?>/admin/group/add">New Group</a></li>
+							<!--<li><a href="<?= BASE_URL ?>/admin/group/assign-permission">Assign Menu To Group</a></li>-->
+						</ul>
+					</li>
+				</ul>
+			</li>
+		
+			<li>
+				<a href="javascript:void(0)" class="menulink">CONFIGURATION</a>
+				<ul>
+					<li>
+						<a href="<?= BASE_URL ?>/admin/site">Site Configs</a>
+					</li>
+					<li>
+						<a href="<?= BASE_URL ?>/admin/email-template">Email Templates</a>
+					</li>					
+					<li>
+						<a href="<?= BASE_URL ?>/admin/parameter">Parameters</a>
+					</li>
+				</ul>
+			</li>
+		</ul>	
+
+	<!-- END id="main_menu" -->
+	</div>

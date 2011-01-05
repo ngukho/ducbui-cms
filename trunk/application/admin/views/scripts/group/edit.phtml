@@ -1,0 +1,41 @@
+<? $this->render("group/_header.phtml"); ?>
+
+<div class="box-content">
+			
+	<div id="tabs" style="min-height:570px;">
+		<ul>
+			<li><a href="#tabs-1">Update Group</a></li>
+			<li><a href="#tabs-2">Assign Permission To Group</a></li>
+		</ul>
+		<div id="tabs-1">
+			<? echo $this->render("group/_form.phtml"); ?>
+		</div>
+		
+		<div id="tabs-2">
+			
+			<form id="permissions" action="<?= $this->currentControllerUrl; ?>/update-permissions" method="post">
+			    <fieldset>
+			        <legend>Group Permissions</legend>
+			        <?php
+			        	$button_control = $this->formSubmit('update_permissions','Update Permissions',array('class'=>"btn_submit"));
+			        	$button_control .= '&nbsp' . $this->formButton('cancel','Cancel',array('class'=>'btn_submit','onclick'=>"location.href = '{$this->currentControllerUrl}'"));
+			        	
+			        	echo $button_control;
+			            echo $this->formHidden('group_id',$this->rowGroup->group_id);
+			            echo $this->RenderAclList($this->userPermissions);
+			            echo $button_control;
+			        ?>
+			    </fieldset>
+			</form>			
+			
+		</div>
+	</div>		
+	
+</div>
+
+<script type="text/javascript">
+	$(function() {
+		$("#tabs").tabs();
+		ShowPermissionForm();
+	});
+</script>

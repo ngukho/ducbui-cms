@@ -1,0 +1,47 @@
+<? $this->render("user/_header.phtml"); ?>
+
+<div class="box-content">
+			
+	<div id="tabs" style="min-height:570px;">
+		<ul>
+			<li><a href="#tabs-1">Account Information</a></li>
+			<li><a href="#tabs-2">Login Credentials</a></li>
+		</ul>
+		<div id="tabs-1">
+
+			<? echo $this->render("user/_form.phtml"); ?>
+
+		</div>
+		
+		<div id="tabs-2">
+			
+<form id="frmPassword" name="frmPassword" action="<?= $this->currentActionUrl; ?>" method="post">
+    <fieldset>
+        <legend>Login Credentials</legend>
+        <table id="table_form" width="100%" border="0" cellpadding="0" cellspacing="1" >
+        <?php
+            echo $this->FormHidden('user_id',$this->rowUser->user_id);
+            echo $this->FormRow('Password',$this->FormPassword('password',null,array('class'=>'required','minlength'=>'6','size'=>25)),true);
+            echo $this->FormRow('Confirm Password',$this->FormPassword('confirm_password',null,array('class'=>'required','equalTo'=>'#password','size'=>25)),true);
+            
+            $button_control = $this->FormSubmit('change_password','Update Password',array('class'=>'btn_submit'));
+            $button_control .= '&nbsp' . $this->FormButton('cancel',$this->getTranslation('Cancel'),array('class'=>'btn_submit','onclick'=>"location.href = '{$this->currentControllerUrl}'"));
+            echo $this->FormRow('&nbsp;',$button_control);
+        ?>
+        </table>
+    </fieldset>
+</form>
+			
+		</div>
+	</div>		
+	
+</div>
+
+<script type="text/javascript">
+	$(function() {
+//		$("#tabs").tabs();
+		$("#tabs").tabs({selected: <?= $this->active_tab; ?>});
+//		$("#tabs").tabs('option', 'selected', 1);
+//		$("#frmPassword").validate();
+	});
+</script>

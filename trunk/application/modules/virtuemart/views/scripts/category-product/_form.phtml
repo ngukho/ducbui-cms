@@ -1,0 +1,50 @@
+<? echo $this->render("parameter/_header.phtml"); ?>
+
+<form action="<?= $this->currentActionUrl; ?>" id="frmParams" name="frmParams" method="POST">
+<input type="hidden" name="parameter_id" value="<?= $this->rowParam->parameter_id; ?>">
+<div align="right" class="box-content">
+
+	<fieldset>
+			<legend>Form <?= $this->title_action; ?></legend>
+			
+			<table id="table_form" width="100%" border="0" cellpadding="0" cellspacing="1" >
+			
+			<?php
+				echo $this->FormRow("{$this->getTranslation('Name')} :",$this->formText('name',$this->rowParam->name,array('class'=>'required','size'=>35)),true);
+				echo $this->FormRow("{$this->getTranslation('Value')} :",$this->formTextarea('value',$this->rowParam->value,array('class'=>'required','rows'=>'8','cols'=>'60')),true,null,true);
+			    echo $this->FormRow("{$this->getTranslation('Available')} :",$this->formCheckbox('active', intval($this->rowParam->active)));
+			    
+				$button_control = $this->formSubmit('submit',"  {$this->getTranslation('Save')}  ",array('class'=>'btn_submit'));
+				$button_control .= '&nbsp' . $this->formButton('cancel',$this->getTranslation('Cancel'),array('class'=>'btn_submit','onclick'=>"location.href = '{$this->currentControllerUrl}'"));
+				echo $this->FormRow('&nbsp;',$button_control);
+			?>
+
+			</table>
+				
+	</fieldset>
+
+</div>
+
+</form>
+<script language="JavaScript">
+$(document).ready(function(){
+    $("#frmParams").validate();
+});
+
+//$().ready(function() {
+//	
+//	// validate signup form on keyup and submit
+//	$("#frmParams").validate({
+//		rules: {
+//			name: "required",
+//			value: "required"
+//		},
+//		messages: {
+//			name: "Please enter key name !",
+//			value: "Please enter param value"
+//		}
+//	});
+//
+//});
+
+</script>

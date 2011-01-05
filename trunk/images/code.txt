@@ -1,0 +1,451 @@
+﻿http://kbs.kimbs.cn/blog/list
+
+192.168.1.100	sun
+192.168.1.1	sol
+
+-------------- Email ------------------------
+smtp : mail-host1.yuranga.com
+pop : mail.yuranga.com
+
+Email: duc@yuranga.com
+Pass: Yuranga!987
+
+-------------- Kimai Server ------------------------
+http://sol/yuranga/kimai
+duc / duc28099
+
+-------------- Subversion 192.168.1.1 ------------------------
+http://yuranga-vn.homelinux.com/yuranga/svn/
+http://sol/yuranga/svn
+duc / duc28099
+
+-------------- Mantis Bus Server ------------------------
+http://bugs.yuranga.com/login_page.php
+duc / duc28099
+
+
+-------------- Database Sun ------------------------
+localtion : sun
+username : wilbur
+password : wilbur
+
+-------------- Printer Server ------------------------
+192.168.1.100	May tren lau
+192.168.1.10	May duoi nha
+
+-------------- Password MD5 ------------------------
+e10adc3949ba59abbe56e057f20f883e
+
+-------------- Open DNS ------------------------
+208.67.222.222
+208.67.220.220
+
+jamie@pro-logic.com.au
+123456
+
+
+admin@cashback.com.au
+123456
+
+cashrebates.com.au
+
+admin
+claimit!123
+
+FTP : 
+  user : cashrebates_ftp
+  pass : AnTyCashrebates
+DB : 
+  db : cashrebatesdb
+  user : cashrebates_user 
+  pass : AnTyAdmin
+
+slashcross
+cross123
+--------------------------------------------------------------
+
+http://sol/yuranga/svn/gymbaroo
+admin section : /gymbaroo/admin
+account admin : skel / skel
+super admin section : gymbaroo/admin/s_admin
+account s_admin :  andrew / reject
+
+--------------------------------------------------------------
+
+admin / franchise!123
+FTP: franchisee.yuranga.com 
+FTP username: franchisee_ftp 
+FTP password: AnTyFranchisee
+
+--------------------------------------------------------------
+
+compiler code php
+http://www.trustfm.net/GeneralTools/SoftwareBcompilerGUI.php?b2=1
+
+admin template
+http://labs.markdijkstra.eu/themeforest/AP/darkblue/index.html
+http://www.mostinspired.com/blog/2008/10/11/admin-templates/
+
+
+// Cac field phai co trong cac bang du lieu dong
+
+created_date      TIMESTAMP     (NULL)             YES             (NULL)                   SELECT,INSERT,UPDATE,REFERENCES         
+modified_date     TIMESTAMP     (NULL)             YES             (NULL)                   SELECT,INSERT,UPDATE,REFERENCES         
+created_by_user   INT(11)       (NULL)             YES             (NULL)                   SELECT,INSERT,UPDATE,REFERENCES         
+modified_by_user  INT(11)       (NULL)             YES             (NULL)                   SELECT,INSERT,UPDATE,REFERENCES         
+delete_flag       TINYINT(1)    (NULL)             YES             0                        SELECT,INSERT,UPDATE,REFERENCES
+
+
+mới cho 2 số
+Binh Aikido: 0978103620 tên My, 0908222325 tên phuong
+Binh Aikido: nó quăng tao 2 số đó đếch biết số nào vào số nào
+Binh Aikido: ý tao là chưa cm lại
+Binh Aikido: con Nô lại kiu tao đi kíu
+Binh Aikido: đám bạn nó xuất hiện thêm vài em mà tao tò mò muốn check 
+Binh Aikido: đíu bit sao 
+Binh Aikido: emcantien_anhcotienkhong njck gĩrl dang onl 
+buivantienduc: con 
+
+ 01212836360 bé Nô
+
+0128 3315 387  ten Ljen da ko den .. q3 .. Ly 9 Thang' ..   19t  1m7 ... 53kg ... .. xau' o? cho? con gaj' mat daj
+buivantienduc: vay may cho tiền nó bằng cach nào
+buivanti
+
+Binh Aikido: học Đại Học sư phạm
+Binh Aikido: em Hân đấy
+Binh Aikido: bit ko?
+buivantienduc: ko
+Binh Aikido: nhỏ nhắn dễ thương đeo mắt kính
+Binh Aikido: 500k/sh
+Binh Aikido: gái này có học vấn, khi hẹn nhớ nhắn tin hay gọi trc
+Binh Aikido: và mày phải đi đó, sv đếch có tiềnđâu
+buivantienduc: số đâu
+Binh Aikido: 0906887734 pass là bạn a Hùng nhà hát Hòa Bình
+Binh Aikido is typing...
+Binh Aikido: amateur
+
+169 Đường Trương Phước Phan, Phường Bình Trị Đông, Quận Bình Tân, Thành Phố Hồ Chí Minh, Phòng Cho Thuê Song Nhi
+
+
+
+Show Recent Messages (F3)
+
+Binh Aikido: có vài món đây 
+Binh Aikido: e có muốn check hok 
+Binh Aikido: tao vừa đc share
+Binh Aikido: nhiều quá
+buivantienduc: buon wá
+buivantienduc: co thi share di
+buivantienduc: toi nay di luon
+buivantienduc: may đi hông
+buivantienduc: tao voi may moi dua keu mot con roi doi hang choi
+Binh Aikido: tao đang sắpxếp cái băng này 
+Binh Aikido: đang đắm đuối đây 
+Binh Aikido: giờ tao rảnh tao đi hà 
+Binh Aikido: tối tao lu bu lắm
+buivantienduc: vay share tao vai em coi
+Binh Aikido: mới cho 2 số
+Binh Aikido: 0978103620 tên My, 0908222325 tên phuong
+Binh Aikido: nó quăng tao 2 số đó đếch biết số nào vào số nào
+Binh Aikido: ý tao là chưa cm lại
+Binh Aikido: con Nô lại kiu tao đi kíu
+Binh Aikido: đám bạn nó xuất hiện thêm vài em mà tao tò mò muốn check 
+Binh Aikido: đíu bit sao 
+Binh Aikido: emcantien_anhcotienkhong njck gĩrl dang onl 
+buivantienduc: con Nô số mời là gi
+buivantienduc: hàng bi nhiêu vậy
+buivantienduc: có nòi giá ko
+buivantienduc: share hàng gì kỳ vậy
+buivantienduc: ko co thông tin gi het tron
+Binh Aikido: con Nô đang kẹt ở Bình tân
+Binh Aikido: tụi này là đám ăn chơi
+Binh Aikido: nó đi rồi quăng lại thôi, thói quen ko nói gì nhiều, tại tao thường tự check tự đề giá thôi 
+buivantienduc: hay à nha
+buivantienduc: vay la mới có số 2 em kia thôi a
+Binh Aikido: 2 số, 1 nick
+buivantienduc: cho tao số con Nô luôn đi
+Binh Aikido: muốn số con Nô thì tao cho?
+Binh Aikido: 01212836360
+Binh Aikido: con Nô thì hẹn chiều tối nay đc ^^
+Binh Aikido: mới nhuộm tóc nhìn cũng ngon
+buivantienduc: giá nó bi h bao nhiêu roi
+Binh Aikido: nó có vài đứa bạn mới đi làm đó
+Binh Aikido: hồi xưa đã 350k
+Binh Aikido: giờ chắc 400k thôi chứ gì
+buivantienduc: trùi
+buivantienduc: hàng này mà ngày 1 lên giá a
+buivantienduc: 
+Binh Aikido: tụi nó làm lúc còn teen
+buivantienduc: xài phai xuong chứ
+Binh Aikido: thì giá phải lên
+Binh Aikido: lên tới đỉnh thì sẽ xuống 
+Binh Aikido: mk, hồi xưa con gà q10 của tao đi có 200 cho tới 300
+Binh Aikido: giờ 500 tới 700 rồi 
+Binh Aikido: có khi còn 1tr nữa 
+Binh Aikido: đã nhỉ
+buivantienduc: trùi
+Binh Aikido: dm, mai đi làm trai bao 
+buivantienduc: má làm như tiền mất giá nhanh lắm vậy
+Binh Aikido: nhanh lắm e ơi 
+Binh Aikido: tiền mà
+Binh Aikido: phù du lắm
+buivantienduc: chính phủ phá giá tiền cung phải từ từ mà
+Binh Aikido: màygọi cho conNô chưa hử?
+buivantienduc: chưa
+buivantienduc: còn đang làm viec
+buivantienduc: e
+Binh Aikido: nó đang kẹt net, đang pm tao um sùm nà 
+buivantienduc: vay 2 em kia pss la gi
+Binh Aikido: hàng mà, cần đíu gì? nói tụi bạn a cho
+Binh Aikido: vậy thôi
+buivantienduc: ua
+buivantienduc: chứ ko pahi 2 so đó là bạn con Nô à
+Binh Aikido: ko
+Binh Aikido: số khác
+Binh Aikido: của cái thằng mámỳ tao hay chat đó ^^
+Binh Aikido: giờ tao đi check má m2y khác 
+Binh Aikido: nó mới cho số
+Binh Aikido: để gọi làm quen cái đã
+buivantienduc: ac
+buivantienduc: vay bạn con Nô mày gap chưa
+Binh Aikido: rồi
+Binh Aikido: đc thôi hà 
+Binh Aikido: đc cái chân dài 
+Binh Aikido: mặt ko đẹp
+Binh Aikido: da ngăm ngăm
+Binh Aikido: nhg nhìn đã lắm
+buivantienduc: ac
+buivantienduc: share tao nick con Nô luôn đi
+buivantienduc: co số cua mấy em đó ko
+buivantienduc: tao xử luôn
+Binh Aikido: mày cứ gọi cho nó đi
+Binh Aikido: tao cho số rồi còn gì?
+Binh Aikido: nick thì mười năm kẹt net nó mới onl 1 lần
+buivantienduc: tao muốn chat truoc
+Binh Aikido: mày phải gọi cho nó
+Binh Aikido: rồi từ nó mới có đám bạn nó chớ?
+Binh Aikido: làm ăn phải vậy, để tụi nó còn có tiềncò
+buivantienduc: ò
+buivantienduc: vay la di con nô truoc
+Binh Aikido: mk, đâu ra cái thói ăn trực tiếp vậy?
+buivantienduc: roi hoi tu tu a
+Binh Aikido: ờ
+Binh Aikido: phải vậy chứ sao?
+buivantienduc: mà hỏi con Nô hay sao
+Binh Aikido: tao có đi bạn của nó, cũng phải gọi qua con Nô trc
+buivantienduc: biet dau no ko share thi sao
+Binh Aikido: mk
+Binh Aikido: bởi vậy
+Binh Aikido: mày rảnh quá ha?
+Binh Aikido: đời ai làm công không bao giờ?
+Binh Aikido: mày ko check nó
+Binh Aikido: hoặc ko cho tiền nó
+Binh Aikido: nó share hàng cho mày làm gì?
+buivantienduc: ac
+Binh Aikido: mk, nó có phải aikidoka cả đời làm việc thiện đâu?
+buivantienduc: lúc truoc tao cung tao cam giac tot cho nó mà
+Binh Aikido: lâu lâu tao ko cho thằng quỷ kia 50k, 100k mà đếcy để làm gì
+buivantienduc: nên tao nhac lai la no biet tao thôi
+Binh Aikido: đâu ra hàng mới hoài vậy?
+Binh Aikido: mày nói bạn a Bình là đc
+buivantienduc: má 
+buivantienduc: tao kui mày dan thằng đó đi nhậu
+buivantienduc: cho nó tiền
+buivantienduc: mà mày có làm dau
+Binh Aikido: tao đi chuyện của tao?
+Binh Aikido: tại sao phải báo mày biết?
+Binh Aikido: khùng!
+Binh Aikido: tới giờ có số cho mày đấy thôi?
+Binh Aikido: nó cần tiền
+Binh Aikido: cần gì nhậu 
+Binh Aikido: cho tiền trực tiếp nó còn khoái hơn là nhậu nhẹt 
+Binh Aikido: nó dắt gái đi nhậu, mày theo đc ko?
+Binh Aikido: mk, càng chết nữa
+Binh Aikido: 0128 3315 387  ten Ljen da ko den .. q3 .. Ly 9 Thang' ..   19t  1m7 ... 53kg ... .. xau' o? cho? con gaj' mat daj
+buivantienduc: vay may cho tiền nó bằng cach nào
+buivantienduc: cào the cho nó a
+Binh Aikido: nó dắt gái cho tao 
+A problem occurred while transferring the file "avatar.beljen.PNG". The transfer has been stopped.
+
+Binh Aikido: tao gặp & đưa tiền (cho cả gái và cho cả nó)
+Binh Aikido: từ gái đó mới mở ra gái khác bay ơi ^^
+Binh Aikido: giờ đi ko
+buivantienduc: thì tao chi muốn thế
+buivantienduc: mày đưa số nó day
+buivantienduc: tao goi cho nó cho gái cho tao
+buivantienduc: tao cho tien nó
+Binh Aikido: cứt 
+buivantienduc: vay la xong chu gi
+Binh Aikido: nó mà chịu nhận của người lạ
+buivantienduc: đó
+buivantienduc: mày nói tao bạn mày là xong
+Binh Aikido: khỏi lun em 
+Binh Aikido: thứ 1 nó ko xài đt
+Binh Aikido: thứ 2: chỉ giao dịch với tao
+Binh Aikido: 
+Binh Aikido: người ngoài miễnđi 
+Binh Aikido: cho dù là bạn tao cũng vậy
+Binh Aikido: muốn thì phải cày theo đường tao vậy đó
+Binh Aikido: từ từ tao cài vào
+Binh Aikido: bạn bè nó cũng share cho nó
+Binh Aikido: nó cũng đâu phải là pro?
+Binh Aikido: cho nên cũng kén chọn lém
+Binh Aikido: huống chi bừa bãi quá
+buivantienduc: mẹ đó
+Binh Aikido: dễ lộ
+buivantienduc: thế tao moi nói ru đi nhau
+buivantienduc: cài tao vào
+Binh Aikido: nó nói là ko đi mà
+Binh Aikido: chẳng qua, tao đc ưu đãi
+Binh Aikido: vì tao check hết toàn bộ bạn bè của nó với bồ nó 
+Binh Aikido: chi hậu hĩnh
+Binh Aikido: (kể cả bồ nó) & chi hậu hĩnh
+Binh Aikido: nên gần như thân
+Binh Aikido: mày làm vậy đi 
+Binh Aikido: thôi out!
+Binh Aikido: tao đi gọi đt cho gái đây
+Binh Aikido: 3 số rồi đấy
+Binh Aikido: con Liên mặt ko đẹp lắm, đc cái teen thôi
+Binh Aikido: tao xem hình rồi
+Binh Aikido: còn con saomai của mày tao nhìn hình ko thấy hứng thú
+buivantienduc: check thu đi
+Binh Aikido: đời làm gì có chuyện rảnh rỗi ăn trực tiếp vậy? sống phải tình cảm người ta mới lâu dài chớ
+buivantienduc: len gap mat
+Binh Aikido: mk, vụt mất con hàng HN 
+Binh Aikido: dm, chán thật
+buivantienduc: cho 50k roi ve
+Binh Aikido: check đíu kịp
+buivantienduc: mó
+Binh Aikido: thôi out!
+Binh Aikido: con hàng ngon lắm
+buivantienduc: check con hàng kia dùm tao đi
+Binh Aikido: lx share  giờ về hn òi
+Binh Aikido: tự dưng phải check dùm mày?
+Binh Aikido: ơ, vớ vẩn nhỉ?
+buivantienduc: 
+Binh Aikido: rảnh với dư tiền thì đi
+Binh Aikido: giờ tao có cả trăm mối
+Binh Aikido: ghi nhận ở đó thôi 
+buivantienduc: mó 
+buivantienduc: tối ngày lên toàn mồi ko
+buivantienduc: hàng thi ko biet duong nào mà lần
+Binh Aikido: ko có đường tắt cho bất kỳ ai!
+buivantienduc: chém gió hả mạy
+Binh Aikido: vậy thôi!
+Binh Aikido: khỏi nói nữa
+Binh Aikido: hàng họ tao cho mày rồi
+Binh Aikido: ko phải ko cho
+Binh Aikido: mày đòi đi tắt thì làm gì có
+Binh Aikido: tùy thôi hà
+Binh Aikido: mày chưa gọi điện thì sao nói?
+buivantienduc: goi dien cho ai
+Binh Aikido: hàng tao cho mày, mà đã gọi chưa mà bit chém gió?
+Binh Aikido: đường tao chơi khác mày  mày sao bit đc mà nói chớ?
+Binh Aikido: mất lòng quá 
+buivantienduc: ac
+buivantienduc: tức wá
+buivantienduc: có hàng ngon mà ko chỉ
+Binh Aikido: 3 số đt rồi còn gì?
+buivantienduc: tội nặng với bạn bè
+Binh Aikido: mẹ, tao chỉ cho rồi đấy thôi
+buivantienduc: thấy tao có hàng ngon lap tức đưa mày ko
+Binh Aikido: tao đi thế nào thì tao chỉ mày đó
+Binh Aikido: ai bảo ko nghe?
+buivantienduc: ghét
+Binh Aikido: tao nói tao check conNô
+Binh Aikido: rồi từ nó mà ra
+buivantienduc: tối nay tao gui cho mày 1 con hàng rau
+Binh Aikido: kiu nó cho bạn nó
+buivantienduc: quận 6
+buivantienduc: đậm chất teen
+Binh Aikido: rồi, muốn teen? tao còn 1 em q6 lun
+buivantienduc: dẻo mỏ như mày ko tốn tiền
+Binh Aikido: học Đại Học sư phạm
+Binh Aikido: em Hân đấy
+Binh Aikido: bit ko?
+buivantienduc: ko
+Binh Aikido: nhỏ nhắn dễ thương đeo mắt kính
+Binh Aikido: 500k/sh
+Binh Aikido: gái này có học vấn, khi hẹn nhớ nhắn tin hay gọi trc
+Binh Aikido: và mày phải đi đó, sv đếch có tiềnđâu
+buivantienduc: số đâu
+Binh Aikido: 0906887734 pass là bạn a Hùng nhà hát Hòa Bình
+Binh Aikido: amateur
+Binh Aikido: đc chưa?
+Binh Aikido: đíu check mà về nói xàm xí tao ghét à
+buivantienduc: tối nay share cho mày luôn
+buivantienduc: mó
+buivantienduc: toàn hang cao thế này
+buivantienduc: cuối tháng co tien moi check
+buivantienduc: 
+buivantienduc: check be nô truoc vậy
+Binh Aikido: con Nô có bạn cũng khá lắm đó, tối mày check nó đi
+Binh Aikido: mày hứa check nó tối nay đi, tao sẽ nhắn tin trc với nó cho
+buivantienduc: khoang 7h tao moi hoc xong
+Binh Aikido: để tao lấy số con kia cho mày?
+Binh Aikido: vừa ý chưa?
+buivantienduc: khoang 7h15 d0i
+buivantienduc: tao cho nó đi ăn
+buivantienduc: roi xu luôn
+buivantienduc: con kia là con bạn bé nô à
+Binh Aikido: con nào?
+Binh Aikido: mày check bé Nô
+Binh Aikido: nói nó có bạn thì giới thiệu
+Binh Aikido: vậy thôi!
+Binh Aikido: nó ko cho thì nói tao
+Binh Aikido: có tiền thì đi em Hân, nói chuyện vui
+Binh Aikido: tuy là kỹ thuật kém
+Binh Aikido: sv nghèo  có cái thú của nó
+buivantienduc: ò
+buivantienduc: de tối nay tao đi bé nô truoc
+Binh Aikido: oút!
+buivantienduc: ma sau 7h15 duoc ko vay
+Binh Aikido: thì mày gọi cho nó đi
+buivantienduc: luc do so no ve nha roi
+Binh Aikido: nó đang đi bụimà 
+Binh Aikido: ở ks ko hà 
+buivantienduc: ok
+buivantienduc: wá tốt
+buivantienduc: vay chac len ks cua nó luôn wá
+Binh Aikido: chứ sao?
+buivantienduc: chơi luôn he he
+Binh Aikido: mk, chỉ có mối đó hàng rẻ mà chất lượng hợp với mày thôi đó
+buivantienduc: nếu o ks thì chec khuya chut di duoc
+buivantienduc: de lat nhan tin nó
+buivantienduc: hẹn cái tối nay
+buivantienduc: lên ks thăm em nó
+buivantienduc: mà nó đang o Bình Tân à
+Binh Aikido: 169 Đường Trương Phước Phan, Phường Bình Trị Đông, Quận Bình Tân, Thành Phố Hồ Chí Minh, Phòng Cho Thuê Song Nhi
+buivantienduc: ok
+buivantienduc: thanks nhá
+buivantienduc: mới nói tới mà nòng trong người wá
+buivantienduc: 
+buivantienduc: mày có đi thăm em nó chưa
+buivantienduc: gan cho may mà
+Binh Aikido: tao đã nói tao phải đi check mấy cái mới
+Binh Aikido: làm quen má mỳ ko phải nhẹ đâu nhá
+buivantienduc: ac
+buivantienduc: vay keu tao di chugn
+buivantienduc: share cho
+buivantienduc: tot hon ko
+buivantienduc: dia chi tim ko ra anh oi
+Binh Aikido: mẹ, tao vừa vào vietbando.com coi đó
+Binh Aikido: cách cty vao 3.6 km
+buivantienduc: ac
+buivantienduc: xa vay
+Binh Aikido: xa quái gì?
+Binh Aikido: từ chỗ mày hay đó nó đi lên thêm tí xíu là tới
+buivantienduc: ừ
+buivantienduc: má
+buivantienduc: xa pa co chứ bộ
+Binh Aikido: mày cứu con hân cũng xa vậyđó 
+Binh Aikido: dm, muốn rẻ thì xuống ngoại ô mà ăn
+Binh Aikido: còn ko đi bộ ra đường Vĩnh Viễn mà check con gà của tao 500k kìa
+buivantienduc: con nào
+Binh Aikido: cái gì cũng đòi hỏi
+Binh Aikido is typing...
+Binh Aikido: con Ly q10 nói mày lâu rồi đó
+buivantienduc: à
+buivantienduc: em hàng gần nhà ông Nhan á
+BUZZ!!!

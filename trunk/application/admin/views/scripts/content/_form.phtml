@@ -1,0 +1,73 @@
+<?php
+$this->jQuery()->addJavascriptFile($this->getBaseUrl() . '/scripts/jquery.FCKEditor.pack.js');
+$this->jQuery()->onLoadCaptureStart()
+?>
+$('.fckeditor').fck({
+	path: '<?php echo $this->getBaseUrl() . "/scripts/fckeditor/" ?>',
+	toolbar: 'Digitalus',
+	height: 300
+});
+<?php $this->jQuery()->onLoadCaptureEnd(); ?>
+
+<form action="<?= $this->currentActionUrl; ?>" id="frmContents" name="frmContents" method="POST">
+<input type="hidden" name="content_id" value="<?= $this->rowContent->content_id; ?>">
+<div align="right" class="box-content">
+
+	<fieldset>
+			<legend>Form <?= $this->title_action; ?></legend>
+			
+			<table id="table_form" width="100%" border="0" cellpadding="0" cellspacing="1" >
+			
+			<?php
+				echo $this->FormRow("Available :",$this->formCheckbox('active', intval($this->rowContent->active)));
+				echo $this->FormRow("Title :",$this->formText('title',$this->h($this->rowContent->title,'edit'),array('class'=>'required','size'=>60)),true);
+			?>
+				<tr>
+					<td class="rowBlue_02 align_top"><label>Body :<span class="required_field">*</span></label></td>
+					<td class="rowBlue_01">
+						<?php $this->FckEditor('html', $this->rowContent->html, 300, '100%', true); ?>
+					</td>
+				</tr>
+				<tr>
+					<td style="text-align:left;" colspan="2" class="rowBlue_02"><label>Configuration For Search Engine</label></td>
+				</tr>				
+			<?php				
+				echo $this->FormRow("Title Search :",$this->formTextarea('title_search',$this->h($this->rowContent->title_search,'edit'),array('rows'=>'2','cols'=>'60')),false,null,true);
+			    echo $this->FormRow("Description Search :",$this->formTextarea('des_search',$this->h($this->rowContent->des_search,'edit'),array('rows'=>'2','cols'=>'60')),false,null,true);
+			    echo $this->FormRow("Keyword Search :",$this->formTextarea('key_search',$this->h($this->rowContent->key_search,'edit'),array('rows'=>'2','cols'=>'60')),false,null,true);
+			    
+				$button_control = $this->formSubmit('submit','  Save  ',array('class'=>'btn_submit save_act'));
+				$button_control .= '&nbsp' . $this->formButton('cancel','Cancel',array('class'=>'btn_submit cancel_act','onclick'=>"location.href = '{$this->currentControllerUrl}'"));
+				echo $this->FormRow('&nbsp;',$button_control);
+			?>
+
+			</table>
+				
+	</fieldset>
+
+</div>
+
+</form>
+
+<script language="JavaScript">
+$(document).ready(function(){
+    $("#frmContents").validate();
+});
+
+//$().ready(function() {
+//	
+//	// validate signup form on keyup and submit
+//	$("#frmParams").validate({
+//		rules: {
+//			name: "required",
+//			value: "required"
+//		},
+//		messages: {
+//			name: "Please enter key name !",
+//			value: "Please enter param value"
+//		}
+//	});
+//
+//});
+
+</script>

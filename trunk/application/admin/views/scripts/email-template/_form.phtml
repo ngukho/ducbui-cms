@@ -1,0 +1,70 @@
+<?php
+$this->jQuery()->addJavascriptFile($this->getBaseUrl() . '/scripts/jquery.FCKEditor.pack.js');
+$this->jQuery()->onLoadCaptureStart()
+?>
+$('.fckeditor').fck({
+	path: '<?php echo $this->getBaseUrl() . "/scripts/fckeditor/" ?>',
+	toolbar: 'Digitalus',
+	height: 300
+});
+<?php $this->jQuery()->onLoadCaptureEnd(); ?>
+
+<form action="<?= $this->currentActionUrl; ?>" id="frmETemps" name="frmETemps" method="POST">
+<input type="hidden" name="email_template_id" value="<?= $this->rowETemp->email_template_id; ?>">
+<div align="right" class="box-content">
+
+	<fieldset>
+			<legend>Form <?= $this->title_action; ?></legend>
+			
+			<table id="table_form" width="100%" border="0" cellpadding="0" cellspacing="1" >
+			
+			<?php
+				echo $this->FormRow("Name :",$this->formText('name',$this->h($this->rowETemp->name,'edit'),array('class'=>'required','size'=>35)),true);
+				echo $this->FormRow("Subject :",$this->formText('subject',$this->h($this->rowETemp->subject,'edit'),array('size'=>70)));
+				
+?>
+				<tr>
+					<td class="rowBlue_02 align_top"><label>Body :<span class="required_field">*</span></label></td>
+					<td class="rowBlue_01">
+						<?php $this->FckEditor('body', $this->h($this->rowETemp->body,'edit','editor'), 300, '100%', true); ?>
+					</td>
+				</tr>
+<?php				
+				echo $this->FormRow("Note :",$this->formTextarea('note',$this->h($this->rowETemp->note,'edit'),array('rows'=>'3','cols'=>'60')),false,null,true);
+			    echo $this->FormRow("Available :",$this->formCheckbox('active', intval($this->rowETemp->active)));
+			    
+				$button_control = $this->formSubmit('submit','  Save  ',array('class'=>'btn_submit save_act'));
+				$button_control .= '&nbsp' . $this->formButton('cancel','Cancel',array('class'=>'btn_submit cancel_act','onclick'=>"location.href = '{$this->currentControllerUrl}'"));
+				echo $this->FormRow('&nbsp;',$button_control);
+			?>
+
+			</table>
+				
+	</fieldset>
+
+</div>
+
+</form>
+
+<script language="JavaScript">
+$(document).ready(function(){
+    $("#frmETemps").validate();
+});
+
+//$().ready(function() {
+//	
+//	// validate signup form on keyup and submit
+//	$("#frmParams").validate({
+//		rules: {
+//			name: "required",
+//			value: "required"
+//		},
+//		messages: {
+//			name: "Please enter key name !",
+//			value: "Please enter param value"
+//		}
+//	});
+//
+//});
+
+</script>

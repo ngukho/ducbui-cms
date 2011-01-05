@@ -1,0 +1,29 @@
+<div class="left-content">
+	<ul>
+		<li class="header"><?= $this->getTranslation('Tax Rate Name'); ?></li> 
+		
+		<?php
+			$i=1;
+			foreach($this->rsTaxRates as $rowTaxRate) :
+				if($rowTaxRate->tax_rate_id == $this->id) :
+		?>		
+				<li>
+					<span class="active"><?= $this->h($rowTaxRate->name); ?> </span>
+				</li>		
+				
+		<?php	else :	?>
+				<li>
+					<a href="<?= $this->currentControllerUrl . '/edit/id/' . $rowTaxRate->tax_rate_id ?>">
+						<span><?= $this->h($rowTaxRate->name); ?> </span>
+					</a>
+				</li>		
+		<?php	endif;	?>				
+				
+		<?php 
+				$i=-$i;
+			endforeach;
+		?>			
+	</ul>	
+				  
+<!-- END class="left-content" -->
+</div>		

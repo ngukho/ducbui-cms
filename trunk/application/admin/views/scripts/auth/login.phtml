@@ -1,0 +1,24 @@
+
+			<div style="padding:5px 0px 30px 0px;font-size: 11px;width:300px; text-align:left;" >
+					<fieldset style="padding: 5px; border: solid 1px #cacaca;">
+						<legend style="font-weight: bold; color: #ea0813">Login Form</legend>
+							<form name="form" action="<?= $this->currentActionUrl; ?>" method="post">
+								<?= $this->formHidden('uri', $this->uri); ?>							
+								<table id="table_form" width="100px" border="0" cellpadding="0" cellspacing="1" >
+								  <tr>
+									<td width="35%" class="rowBlue_02"><label>User name :</label></td> 
+									<td class="rowBlue_01"><input type="text" name="username" id="username" value="" size="30"></td>
+								  </tr>
+			   
+								  <tr>
+									<td width="35%" class="rowBlue_02"><label>Password :</label></td> 
+									<td class="rowBlue_01"><input type="password" name="password" id="password" value="" size="30"></td>
+								  </tr>
+								  <tr>
+									<td class="rowBlue_02"></td>
+									<td class="rowBlue_01"><input type="submit" class="btn" name="submit" id="submit" value=" Login "></td>
+								  </tr>
+								</table>
+							 </form>
+					</fieldset>
+				</div>

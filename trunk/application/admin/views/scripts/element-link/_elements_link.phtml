@@ -1,0 +1,32 @@
+<table id="show_data" width="100%" border="0" cellpadding="0" cellspacing="1" style="font-size:11px;">
+	<tr>
+		<th width="15%"><?= $this->getTranslation('Module Name'); ?></th>
+		<th width=""><?= $this->getTranslation('Alias Path'); ?></th>
+		<th width="10%""><?= $this->getTranslation('Role'); ?></th>
+		<th width="6%"><?= $this->getTranslation('Select'); ?></a></th>
+	</tr>
+	<?
+		$i=1;
+		foreach($this->rsElements as $rowElement) :
+	?>
+		<tr class="<?= ($i==1)?'rowBlue_01':'rowBlue_02'; ?>">
+			<td style="font-size:12px;"><?= $rowElement->module_name; ?></td>
+			<td style="font-size:12px;"><?= $rowElement->alias_path; ?></td>
+			<td style="font-size:12px;"><?= $rowElement->role; ?></td>
+			<td align="center">
+				<a href='javascript:void(0);' 
+					onclick="parent.chooseLink('<?= $rowElement->alias_path ?>');">
+					<img src='<?= BASE_IMAGES ?>/btnSelect.png' alt='Select' border=0>
+				</a>
+			</td>
+		</tr>
+						
+	<? 
+			$i=-$i;
+		endforeach;
+	?>			
+</table>		
+
+<div class="box-content" >
+	<?= $this->strPagingElements; ?>
+</div>

@@ -1,0 +1,71 @@
+<? echo $this->render("manufacturer/_header.phtml"); ?>
+
+<form action="<?= $this->currentActionUrl; ?>" id="frmManus" name="frmManus" method="POST" enctype="multipart/form-data">
+<input type="hidden" name="manu_id" value="<?= $this->rowManu->manu_id; ?>">
+<input type="hidden" name="image" value="<?= $this->rowManu->image; ?>">
+<div align="right" class="box-content">
+
+	<fieldset>
+			<legend>Form <?= $this->title_action; ?></legend>
+			
+			<table id="table_form" width="100%" border="0" cellpadding="0" cellspacing="1" >
+			
+			<?php
+				echo $this->FormRow($this->t("Manufacturer Name :"),$this->formText('name',$this->h($this->rowManu->name,'edit'),array('class'=>'required','size'=>60)),true);
+				echo $this->FormRow($this->t("Site Url :"),$this->formText('url',$this->h($this->rowManu->url,'edit'),array('class'=>'required','size'=>60)),true);
+				$image_html = '';
+				$class_css = 'rowBlue_02';
+				if(!empty($this->rowManu->image))
+				{
+					$class_css .= ' align_top';
+					$image_html .= "<br><br>";
+					$image_html .= "<img border=0 src='" . BASE_URL . '/' . DIR_UPLOAD_MEDIA .  "/{$this->rowManu->image}' width='100' id='img_status_2'>";
+					$image_html .= "&nbsp;&nbsp;<a class='base' onclick='deleteRow(\"" . $this->currentControllerUrl . '/delete-image/id/' . $this->rowManu->manu_id . "\",\"Do you want to delete this image ?\")' href='javascript:void(0);'>Delete Image</a>";
+				}				
+			?>
+				<tr>
+					<td class="<?= $class_css; ?>"><label><?= $this->t('Image :');?></label></td>
+					<td class="rowBlue_01">
+						<input type="file" id="field_image" name="field_image">
+						<?php
+							if(!empty($image_html)) echo $image_html;
+						?>
+					</td>
+				</tr>			
+			
+			<?php				
+				$button_control = $this->formSubmit('submit','  Save  ',array('class'=>'btn_submit'));
+				$button_control .= '&nbsp' . $this->formButton('cancel','Cancel',array('class'=>'btn_submit','onclick'=>"location.href = '{$this->currentControllerUrl}'"));
+				echo $this->FormRow('&nbsp;',$button_control);
+			?>
+
+			</table>
+				
+	</fieldset>
+
+</div>
+
+</form>
+
+<script language="JavaScript">
+$(document).ready(function(){
+    $("#frmManus").validate();
+});
+
+//$().ready(function() {
+//	
+//	// validate signup form on keyup and submit
+//	$("#frmParams").validate({
+//		rules: {
+//			name: "required",
+//			value: "required"
+//		},
+//		messages: {
+//			name: "Please enter key name !",
+//			value: "Please enter param value"
+//		}
+//	});
+//
+//});
+
+</script>

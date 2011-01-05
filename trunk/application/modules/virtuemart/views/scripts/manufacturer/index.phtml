@@ -1,0 +1,60 @@
+<? echo $this->render("manufacturer/_header.phtml"); ?>
+
+<form action="<?= $this->currentControllerUrl; ?>/delete-all" id="frmData" name="frmData" method="POST" onsubmit="return CheckDeleteAll();">
+
+<div align="right" class="box-content">
+	<a href="<?= $this->currentControllerUrl; ?>/add" class="btn_green">
+		<?= $this->getTranslation('Add New'); ?>
+	</a>
+	<input type="submit" value="Delete" name="" id="" class="btn_submit_green"/>
+</div>
+
+<div class="box-content">
+
+	<table id="show_data" width="100%" border="0" cellpadding="0" cellspacing="1">
+	<tr>
+		<th width="2%" align="center"><input id="checkboxAll" name="checkboxAll" onclick="doCheckAll(document.frmData);" type="checkbox"></th>
+		<th width="30%"><?= $this->nameTX ?></th>
+		<th width=""><?= $this->urlTX ?></th>
+		<th width="6%"><?= $this->url_clickedTX ?></th>
+		<th width="10%"><?= $this->date_last_clickTX ?></th>
+		<th width="8%">Image</th>
+		<th width="6%"><?= $this->getTranslation('Action'); ?></a></th>
+	</tr>
+	<?
+		$i=1;
+		foreach($this->rsManus as $rowManu) :
+			$manu_image = BASE_URL . '/' . DIR_UPLOAD_MEDIA . '/' . $rowManu->image;
+	?>
+		<tr class="<?= ($i==1)?' rowBlue_01':'rowBlue_02'; ?>">
+			<td align="center">
+				<input id="checkbox" name="checkbox[]" value="<?= $rowManu->manu_id; ?>" onclick="doCheckOne(document.frmData);" type="checkbox"> 
+			</td>
+			<td><?= $this->h($rowManu->name); ?></td>
+			<td><a href="<?= $rowManu->url; ?>" class="base" target="_blank" title="<?= $rowManu->url; ?>"><?= $rowManu->url; ?></a></td>
+			<td align="center"><?= $rowManu->url_clicked; ?></td>
+			<td align="center"><?= gmdate(VM_DEFAULT_FORMAT_SHORT_DATE,$rowManu->date_last_click); ?></td>
+			<td align="center">
+				<img src="<?= $manu_image; ?>" class="vtip" title="<img src='<?= $manu_image; ?>'/>" border="0" height="30px">
+			</td>
+			<td align="center">
+				<?= $this->renderEditLink($this->currentControllerUrl . '/edit/id/' . $rowManu->manu_id); ?>
+				<?= $this->renderDeleteLink($this->currentControllerUrl . '/delete/id/' . $rowManu->manu_id); ?>
+			</td>
+		</tr>
+						
+	<? 
+			$i=-$i;
+		endforeach;
+	?>			
+	</table>		
+
+</div>
+
+<div class="box-content" >
+	<?= $this->strPaging; ?>
+</div>
+
+
+</form>
+

@@ -1,0 +1,79 @@
+<? echo $this->render("menu/_header.phtml"); ?>
+
+<?php
+	$this->jQuery()->addJavascriptFile($this->getBaseUrl() . '/scripts/ThickBox.js');
+	$this->jQuery()->addStylesheet($this->getBaseUrl() . '/styles/ThickBox.css');
+?>
+
+<form action="<?= $this->currentActionUrl; ?>" id="frmMenus" name="frmMenus" method="POST">
+<input type="hidden" name="menu_id" value="<?= $this->rowMenu->menu_id; ?>">
+<div align="right" class="box-content">
+
+	<fieldset>
+			<legend>Form <?= $this->title_action; ?></legend>
+			
+			<table id="table_form" width="100%" border="0" cellpadding="0" cellspacing="1" >
+			
+			<?php
+				echo $this->FormRow("Name :",$this->formText('name',$this->rowMenu->name,array('class'=>'required','size'=>35)),true);
+				echo $this->FormRow("Choose Parent :",$this->parentMenu,true,null,true);
+				echo $this->FormRow("Display in Admin Panel :",$this->adminPanel,false,null,false);
+				
+				$link_path = $this->currentModuleUrl . "/element-link/index/admin/1";
+				$link_control = $this->formText('admin_menu_link',$this->rowMenu->admin_menu_link,array('readonly'=>'true','size'=>50));
+				$link_control .= "&nbsp<input alt='{$link_path}?TB_iframe=true&height=605&width=1000' type='button' class='thickbox' value='Get Link' id='get_link' name='get_link' title='Links'/>";
+				$link_control .= "&nbsp<input type='button' value='Clear Link' id='clear_link' name='clear_link' onclick='$(\"input#admin_menu_link\").val(\"\")' />";
+
+				echo $this->FormRow("Menu Link :",$link_control,false);
+				echo $this->FormRow("Order :",$this->formText('order',$this->rowMenu->order,array('size'=>5)));
+			    echo $this->FormRow("Available :",$this->formCheckbox('active', intval($this->rowMenu->active)));
+			    
+			?>
+			
+			<tr>
+				<td width="25%" class="rowBlue_02 align_top">
+					<label>Icons :</label>
+					<?
+						if(!empty($this->rowMenu->admin_menu_img))
+							echo "<br><img alt='{$this->rowMenu->admin_menu_img}' src='/images/large_icons/{$this->rowMenu->admin_menu_img}'";
+						echo $this->formHidden('menu_icon',$this->rowMenu->admin_menu_img);							
+					?>
+					
+				</td>
+				<td class="rowBlue_01">
+				
+				<div style="border: 1px solid rgb(231, 230, 216); margin: 0px; padding: 6px;overflow-y:auto; background-color: rgb(252, 252, 248);height: 338px;">
+					<? echo $this->RenderListIcons(BASE_PATH . "/images/large_icons","admin_menu_img"); ?>
+				</div>
+				
+		
+				</td>
+			</tr>
+			
+			<?php			    
+				$button_control = $this->formSubmit('submit',"  {$this->getTranslation('Save')}  ",array('class'=>'btn_submit save_act'));
+				$button_control .= '&nbsp' . $this->formButton('cancel',$this->getTranslation('Cancel'),array('class'=>'btn_submit cancel_act','onclick'=>"location.href = '{$this->currentControllerUrl}'"));
+				echo $this->FormRow('&nbsp;',$button_control);
+			?>
+
+			</table>
+				
+	</fieldset>
+
+</div>
+
+</form>
+<script language="JavaScript">
+
+$(document).ready(function(){
+    $("#frmMenus").validate();
+});
+
+function chooseLink(element)
+{
+	$('input#admin_menu_link').val(element);
+	tb_remove();
+}
+
+
+</script>

@@ -1,0 +1,55 @@
+<? echo $this->render("email-template/_header.phtml"); ?>
+
+<form action="<?= $this->currentControllerUrl; ?>/delete-all" id="frmData" name="frmData" method="POST" onsubmit="return CheckDeleteAll();">
+
+<div align="right" class="box-content">
+<!--	<a href="<?= $this->currentControllerUrl; ?>/add" class="btn_green add_act">
+		Add New
+	</a>
+	<a href="#" onclick="javascript:if(document.frmData.onsubmit()) document.frmData.submit();" class="btn_green delete_act">
+		Delete
+	</a>	-->
+	<input type="button" onclick="location.href = '<?= $this->currentControllerUrl; ?>/add';" value="Add New" name="" id="" class="btn_submit_green add_act"/>
+	<input type="submit" value="Delete" name="" id="" class="btn_submit_green delete_act"/>
+</div>
+
+<div class="box-content">
+
+	<table id="show_data" width="100%" border="0" cellpadding="0" cellspacing="1">
+	<tr>
+		<th width="2%" align="center"><input id="checkboxAll" name="checkboxAll" onclick="doCheckAll(document.frmData);" type="checkbox"></th>
+		<th width="10%"><?= $this->nameTX ?></th>
+		<th width="15%"><?= $this->subjectTX ?></th>
+		<th width="20%">Note</th>
+		<th width="">Email Body</th>
+		<th width="6%">Action</a></th>
+	</tr>
+	<?
+		$i=1;
+		foreach($this->rsETemps as $rowETemp) :
+	?>
+		<tr class="<?= ($i==1)?' rowBlue_01':'rowBlue_02'; ?>">
+			<td align="center">
+				<input id="checkbox" name="checkbox[]" value="<?= $rowETemp->email_template_id; ?>" onclick="doCheckOne(document.frmData);" type="checkbox"> 
+			</td>
+			<td><?= $this->h($rowETemp->name); ?></td>
+			<td><?= $this->h($rowETemp->subject); ?></td>
+			<td><?= $this->h($rowETemp->note); ?></td>
+			<td><?= Digitalus_Toolbox_String::truncateText($this->h($rowETemp->body,'view','editor'),100); ?> ... </td>			
+			<td align="center">
+				<?= $this->renderStatusLink($rowETemp->email_template_id,$this->currentControllerUrl . '/switch-status/id/' . $rowETemp->email_template_id,$rowETemp->active); ?>
+				<?= $this->renderEditLink($this->currentControllerUrl . '/edit/id/' . $rowETemp->email_template_id); ?>
+				<?= $this->renderDeleteLink($this->currentControllerUrl . '/delete/id/' . $rowETemp->email_template_id); ?>
+			</td>
+		</tr>
+						
+	<? 
+			$i=-$i;
+		endforeach;
+	?>			
+	</table>		
+
+</div>
+
+</form>
+

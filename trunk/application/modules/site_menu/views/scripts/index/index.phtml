@@ -1,0 +1,33 @@
+<? $this->render('index/_header.phtml'); ?>
+
+<form action="<?= $this->currentControllerUrl; ?>/delete-all" id="frmData" name="frmData" method="POST" onsubmit="return CheckDeleteAll();">
+
+<div class="box-content">
+	<div class="floatRight">
+		<a href="<?= $this->currentControllerUrl; ?>/add" class="btn_green">Add New	</a>
+		<input type="submit" value="Delete" name="" id="" class="btn_submit_green"/>
+	</div>
+	<br class="clear">		
+</div>
+
+<div class="box-content">
+
+	<table id="show_data" width="100%" border="0" cellpadding="0" cellspacing="1">
+	<tr>
+		<th width="2%" align="center"><input id="checkboxAll" name="checkboxAll" onclick="doCheckAll(document.frmData);" type="checkbox"></th>
+		<th>Name</th>
+		<th width="30%">Site Menu Link</th>
+		<th width="6%">Order<a class="save_action" href="javascript:void(0);" onclick="saveOrder($('#frmData'),'<?= $this->currentControllerUrl?>/save-order');"/></th>
+		<th width="6%">Action</a></th>
+	</tr>
+	
+	<? $this->showTreeStructural($this->menuLevelOnes,"index/_menuRow.phtml",$order = 'order ASC',1); ?>
+	
+	</table>		
+
+</div>	
+
+</form>
+
+
+

@@ -1,0 +1,54 @@
+<? echo $this->render("category-product/_header.phtml"); ?>
+
+<form action="<?= $this->currentControllerUrl; ?>/delete-all" id="frmData" name="frmData" method="POST" onsubmit="return CheckDeleteAll();">
+
+<div align="right" class="box-content">
+	<a href="<?= $this->currentControllerUrl; ?>/add" class="btn_green">
+		<?= $this->getTranslation('Add New'); ?>
+	</a>
+	<input type="submit" value="Delete" name="" id="" class="btn_submit_green"/>
+</div>
+
+<div class="box-content">
+
+	<table id="show_data" width="100%" border="0" cellpadding="0" cellspacing="1">
+	<tr>
+		<th width="2%" align="center">#</th>
+		<th width="30%"><?= $this->nameTX ?></th>
+		<th width="">Value</th>
+		<th width="6%"><?= $this->t('Action'); ?></a></th>
+	</tr>
+	<?
+		$i=1;
+		foreach($this->rsCats as $rowCat) :
+	?>
+		<tr class="<?= ($i==1)?' rowBlue_01':'rowBlue_02'; ?>" style="cursor:pointer;" onclick="location.href = '<?= $this->currentActionUrl . '/c_path/' . $rowCat->cat_id; ?>'">
+			<td align="center">
+				<?= $rowCat->cat_id; ?>
+			</td>
+			<td>
+				<div class="image_folder"><?= $this->h($rowCat->name); ?></div>
+			</td>
+			<td></td>
+			<td align="center">
+				<?= $this->renderStatusLink($rowCat->cat_id,$this->currentControllerUrl . '/switch-status/id/' . $rowCat->cat_id,$rowCat->active); ?>
+				<?= $this->renderEditLink($this->currentControllerUrl . '/edit/id/' . $rowCat->cat_id); ?>
+				<?= $this->renderDeleteLink($this->currentControllerUrl . '/delete/id/' . $rowCat->cat_id); ?>
+			</td>
+		</tr>
+						
+	<? 
+			$i=-$i;
+		endforeach;
+	?>			
+	</table>		
+
+</div>
+
+<div class="box-content" >
+	<?= $this->strPaging; ?>
+</div>
+
+
+</form>
+

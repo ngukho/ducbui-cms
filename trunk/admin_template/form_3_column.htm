@@ -1,0 +1,187 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Form 3 Cot</title>
+
+<script language="JavaScript" type="text/javascript" src="./js/jquery-1.3.2.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="./js/jquery-ui-1.7.2.custom.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="./js/gen_validatorv2.js"></script>
+<script language="JavaScript" type="text/javascript" src="./js/ajaxcontent.js"></script>
+<script language="JavaScript" type="text/javascript" src="./js/application.js"></script>
+
+<link rel="stylesheet" type="text/css" media="screen" href="./css/admin_3_column.css">
+<link rel="stylesheet" type="text/css" media="screen" href="./css/jquery-ui-1.7.2.custom.css">
+
+</head>
+<body>
+
+<div id="wrapper">
+
+	<div id="page-header"><h1><label class="member"><a href="#">hungchung</a></label> | <a href="#">Logout</a></h1></div>
+
+	<div id="main_menu">
+
+	
+	</div>
+	<!--   End MENU     //-->
+
+	<div id="page-body"> 		
+		
+		<div id="left">
+		 	<ul>
+				<li class="header">SYSTEM</li> 
+				<li><span class="parent">Modules</a>
+					<ul>
+						<li><a href="/admin/module"><span >Modules</span></a></li>
+						<li><a href="/admin/menu"><span >Menu Main</span></a></li>
+						<li><a href="/admin/submenu"><span class="active" >Sub menu</span></a></li>
+						<li><a href="/admin/publictemplate"><span >Public templates </span></a></li>
+						<li><a href="/admin/language"><span >Language </span></a></li>
+		  			</ul>	
+
+				</li>
+				<li><a href="/admin/menu"><span >Menu Main</span></a></li>
+				<li><a href="/admin/submenu"><span >Sub menu</span></a></li>
+				<li><a href="/admin/publictemplate"><span >Public templates </span></a></li>
+				<li><a href="/admin/language"><span >Language </span></a></li>
+		  	</ul>	
+		  	<ul>
+				<li class="header">EXTEND</li> 
+				<li><a href="/admin/advertising"><span class="parent">Advertising</span></a></li>
+				<li><a href="#"><span >Something</span></a></li>
+				<li><a href="#"><span >Something </span></a></li>
+		  	</ul>
+		</div>
+		<!-- End Left //-->
+
+		<div id="right" style="background:#0099CC;">
+			
+		</div>
+
+		<div id="middle">
+		
+			<div class="introduction" title="<img src='http://www.vnexpress.net/Files/Subject/3B/A1/59/55/chumanh42.jpg'/>">
+				<h1>Menu Management</h1>
+				<div class="sidebar">
+					<a href="#">Menu Management Tool</a> &raquo; <a href="#">Menu 1</a> &raquo; <a href="#">Menu 2</a> 
+				</div>
+			</div>	
+		
+			<div class="error" title="Vertigo Tip by www.vertigo-project.com !">		
+				- Loi thu nhat ne ba oi Bui Van Tien Duc
+			</div>	
+	
+			<div class="info" title="Vertigo Tip by www.vertigo-project.com !">
+				Luu du lieu thanh cong roi ban oi
+			</div>	
+			
+			<div class="box-content">
+			
+		
+			</div>
+			
+
+		</div>
+		<!-- End Center //-->	
+		
+		
+		<div class="clearer"></div>		
+
+		
+	</div>
+	<!-- End Page Body //-->	
+
+	
+	<div id="footer"><p>&copy; <a href="http://www.sebastiansulinski.co.uk/" title="Web Desiger East Sussex">Web Designer East Sussex</a></p></div> 
+</div>	
+
+
+<script language="JavaScript">
+
+function CheckForm()
+{
+	var action = $("#action").val();
+	var arrInput = $("input");
+	//var isChecked = false;
+	var result = true;
+	switch(action)
+	{
+		case "none":
+			alert("Please choose an action !");
+    		result = false;
+			break;			
+		case "inactive":
+		case "active":
+			result = isChecked(arrInput);
+			if(result == false)
+				alert("Please check a checkbox !");
+			break;
+		case "delete":
+			result = isChecked(arrInput);
+			if(result == false)
+				alert("Please check a checkbox !");					
+			else				
+				result = confirm("Do you want to delete this item ?") ? true : false ; 
+			break;
+		case "order":
+			var objValidate = new Validate();
+			for(var i=0;i<arrInput.length;i++)
+			{
+				if(arrInput[i].type == "text" && arrInput[i].id == "order")
+				{
+					if(!objValidate.isOnlyNumeric(arrInput[i].value))
+					{
+						alert("Order is number !");
+						arrInput[i].focus();
+						result = false;
+					}
+				}				
+			}
+			break;
+	}
+	return result;	
+}
+
+function isChecked(frmObj)
+{
+	for(var i=0;i<frmObj.length;i++)
+	{
+		if(frmObj[i].type == "checkbox" && frmObj[i].name != "checkboxAll");
+			if(frmObj[i].checked == true)
+				return true;
+	}
+	return false;
+	
+}
+
+</script>
+
+<script type="text/javascript">
+	$(function() {
+		$("#datetime").datepicker();
+		$('#datetime').datepicker('option', {dateFormat:"dd/mm/yy"}); 		
+		$("#tabs").tabs();
+	});
+
+	var menu=new menu.dd("menu");
+	menu.init("menu","menuhover");
+</script>
+
+
+<!--	
+	Cau truc site
+	
+	<div id="wrapper">
+		<div id="page-header"></div>
+		<div id="main_menu"></div>
+		<div id="page-body">
+			<div id="left"></div>
+			<div id="right"></div>
+			<div class="clearer"></div>
+		</div>
+		<div id="footer"><p>©</p></div>
+	</div>	
+
+-->
+</body>
+</html>

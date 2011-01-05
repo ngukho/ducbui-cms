@@ -1,0 +1,48 @@
+<? echo $this->render("product-type/_header.phtml"); ?>
+
+<form action="<?= $this->currentControllerUrl; ?>/delete-all" id="frmData" name="frmData" method="POST" onsubmit="return CheckDeleteAll();">
+
+<div align="right" class="box-content">
+	<a href="<?= $this->currentControllerUrl; ?>/add" class="btn_green">
+		Add New
+	</a>
+	<input type="submit" value="Delete" name="" id="" class="btn_submit_green"/>
+</div>
+
+<div class="box-content">
+
+	<table id="show_data" width="100%" border="0" cellpadding="0" cellspacing="1">
+	<tr>
+		<th width="2%" align="center"><input id="checkboxAll" name="checkboxAll" onclick="doCheckAll(document.frmData);" type="checkbox"></th>
+		<th width=""><?= $this->nameTX ?></th>
+		<th width=""><?= $this->handlerTX ?></th>
+		<th width="11%"><?= $this->allowAddTX ?></th>
+		<th width="11%">Action</a></th>
+	</tr>
+	<?
+		$i=1;
+		foreach($this->rsProTypes as $rowType) :
+	?>
+		<tr class="<?= ($i==1)?' rowBlue_01':'rowBlue_02'; ?>">
+			<td align="center">
+				<input id="checkbox" name="checkbox[]" value="<?= $rowType->type_id; ?>" onclick="doCheckOne(document.frmData);" type="checkbox"> 
+			</td>
+			<td><?= $this->h($rowType->name); ?></td>
+			<td><?= $this->h($rowType->type_handler); ?></td>
+			<td align="center"><?= ($rowType->allow_add_to_cart ? 'Y' : 'N'); ?></td>
+			<td align="center">
+				<?= $this->renderEditLink($this->currentControllerUrl . '/edit/id/' . $rowType->type_id); ?>
+				<?= $this->renderDeleteLink($this->currentControllerUrl . '/delete/id/' . $rowType->type_id); ?>
+			</td>
+		</tr>
+						
+	<? 
+			$i=-$i;
+		endforeach;
+	?>			
+	</table>		
+
+</div>
+
+</form>
+

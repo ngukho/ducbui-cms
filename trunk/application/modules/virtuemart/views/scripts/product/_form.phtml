@@ -1,0 +1,78 @@
+<? echo $this->render("product/_header.phtml"); ?>
+
+<form action="<?= $this->currentActionUrl . '/cPath/' . $this->cPath . '/cId/' . $this->cId; ?>" id="frmProducts" name="frmProducts" method="POST" enctype="multipart/form-data">
+
+<input type="hidden" name="cat_id" value="<?= $this->cId; ?>">
+<input type="hidden" name="image" value="<?= $this->rowProduct->image; ?>">
+
+<div class="box-content">
+	<span style="font-size:13px;font-weight:bold;"><?= $this->breadCrumbs; ?></span>
+</div>
+
+<div class="box-content" style="padding:4px 0px;">
+	
+	<div class="floatRight">
+		<?php
+			echo $this->formSubmit('submit','  Save  ',array('class'=>'btn_submit save_act'));
+			$cancelUrl = $this->currentModuleUrl . '/category-product/index/cPath/' . $this->cPath . '/cId/' . $this->cId; 
+			echo '&nbsp;' . $this->formButton('cancel','Cancel',array('class'=>'btn_submit cancel_act','onclick'=>"location.href = '{$cancelUrl}'")); 
+		?>
+	</div>
+	Go : <?= $this->showSelectCats('sel_category',$this->t('/ TOP'),$this->cId,array("onchange" => "javascript:location.href = \"{$this->currentModuleUrl}/category-product/index/cId/\" + this.value;")); ?>
+</div>
+
+<div align="right" class="box-content">
+
+	<div id="tabs">
+		<ul>
+			<li><a href="#tabs-1"><?= $this->t('Product Information'); ?></a></li>
+			<li><a href="#tabs-2"><?= $this->t('Product Status'); ?></a></li>
+			<li><a href="#tabs-3"><?= $this->t('Product Images'); ?></a></li>
+			<li><a href="#tabs-4"><?= $this->t('Metadata'); ?></a></li>
+		</ul>
+		
+		<div id="tabs-1">
+			<? echo $this->render("product/_product_information.phtml"); ?>
+		</div>
+		
+		<div id="tabs-2">
+			<? echo $this->render("product/_product_status.phtml"); ?>
+		</div>
+		
+		<div id="tabs-3">
+			<? echo $this->render("product/_product_images.phtml"); ?>
+		</div>
+		
+		<div id="tabs-4">
+			<? echo $this->render("product/_product_metadata.phtml"); ?>			
+		</div>
+
+		
+	</div>		
+	
+</div>
+
+</form>
+<script language="JavaScript">
+$(document).ready(function(){
+	$("#tabs").tabs();
+    $("#frmProducts").validate();
+});
+
+//$().ready(function() {
+//	
+//	// validate signup form on keyup and submit
+//	$("#frmParams").validate({
+//		rules: {
+//			name: "required",
+//			value: "required"
+//		},
+//		messages: {
+//			name: "Please enter key name !",
+//			value: "Please enter param value"
+//		}
+//	});
+//
+//});
+
+</script>

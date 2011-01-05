@@ -1,0 +1,246 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Button Type</title>
+
+<script language="JavaScript" type="text/javascript" src="./js/jquery-1.3.2.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="./js/jquery-ui-1.7.2.custom.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="./js/gen_validatorv2.js"></script>
+<script language="JavaScript" type="text/javascript" src="./js/ajaxcontent.js"></script>
+<script language="JavaScript" type="text/javascript" src="./js/application.js"></script>
+
+<link rel="stylesheet" type="text/css" media="screen" href="./css/admin.css">
+<link rel="stylesheet" type="text/css" media="screen" href="./css/jquery-ui-1.7.2.custom.css">
+
+</head>
+<body>
+
+<div id="wrapper">
+
+	<div id="page-header"><h1><label class="member"><a href="#">hungchung</a></label> | <a href="#">Logout</a></h1></div>
+
+	<div id="main_menu">
+
+<ul class="menu" id="menu">
+	<li><a href="#" class="menulink">Dropdown One</a>
+		<ul>
+			<li><a href="#">Navigation Item 1</a></li>
+			<li>
+				<a href="#" class="sub">Navigation Item 2</a>
+				<ul>
+					<li class="topline"><a href="#">Navigation Item 1</a></li>
+					<li><a href="#">Navigation Item 2</a></li>
+					<li><a href="#">Navigation Item 3</a></li>
+					<li><a href="#">Navigation Item 4</a></li>
+					<li><a href="#">Navigation Item 5</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#" class="sub">Navigation Item 3</a>
+				<ul>
+					<li class="topline"><a href="#">Navigation Item 1</a></li>
+					<li><a href="#">Navigation Item 2</a></li>
+					<li>
+						<a href="#" class="sub">Navigation Item 3</a>
+						<ul>
+							<li class="topline"><a href="#">Navigation Item 1</a></li>
+							<li><a href="#">Navigation Item 2</a></li>
+							<li><a href="#">Navigation Item 3</a></li>
+							<li><a href="#">Navigation Item 4</a></li>
+							<li><a href="#">Navigation Item 5</a></li>
+							<li><a href="#">Navigation Item 6</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Navigation Item 4</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Navigation Item 4</a></li>
+			<li><a href="#">Navigation Item 5</a></li>
+		</ul>
+	</li>
+	<li><a href="#" class="menulink">Non-Dropdown</a></li>
+	<li>
+		<a href="#" class="menulink">Dropdown Two</a>
+		<ul>
+			<li><a href="#">Navigation Item 1</a></li>
+			<li>
+				<a href="#" class="sub">Navigation Item 2</a>
+				<ul>
+					<li class="topline"><a href="#">Navigation Item 1</a></li>
+					<li><a href="#">Navigation Item 2</a></li>
+					<li><a href="#">Navigation Item 3</a></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li>
+		<a href="#" class="menulink">Dropdown Three</a>
+		<ul>
+			<li><a href="#">Navigation Item 1</a></li>
+			<li><a href="#">Navigation Item 2</a></li>
+			<li><a href="#">Navigation Item 3</a></li>
+			<li><a href="#">Navigation Item 4</a></li>
+			<li><a href="#">Navigation Item 5</a></li>
+			<li>
+				<a href="#" class="sub">Navigation Item 6</a>
+				<ul>
+					<li class="topline"><a href="#">Navigation Item 1</a></li>
+					<li><a href="#">Navigation Item 2</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Navigation Item 7</a></li>
+			<li><a href="#">Navigation Item 8</a></li>
+			<li><a href="#">Navigation Item 9</a></li>
+			<li><a href="#">Navigation Item 10</a></li>
+		</ul>
+	</li>
+</ul>	
+	
+	</div>
+	<!--   End MENU     //-->
+
+	<div id="page-body"> 		
+		
+		<div id="right" style="width:99.3%">
+		
+			<div class="introduction">
+				<h1>Questions Manager </h1>
+				This page use to manage security question
+			</div>
+			
+<!--			
+			<div class="box-content">
+				<div class="floatRight">
+					<a class="btn_while" href="http://vietnamsuperpage.com/admin/question/index/add">
+						Button
+					</a>
+				
+					<a class="btn_green" href="http://vietnamsuperpage.com/admin/question/index/add">
+						Button
+					</a>
+				</div>
+				Filter							
+				<select id="action" name="action" size="1">
+					<option value="none" selected="selected"> --- Please choose --</option>
+					<option value="inactive"> - Inactive mutil items</option>
+					<option value="active"> - Active mutil items</option>
+					<option value="delete"> - Delete mutil items</option>
+					<option value="order"> - Order mutil items</option>
+					<option value="order"> - Order mutil items sdfsdfsf</option>				
+				</select>		
+				<input type="submit" class="btn" id="" name="" value="Filter Btn">
+				<input type="submit" class="btn_submit" id="" name="" value="Submit Btn">
+				<input type="submit" class="btn_pay" value="Submit All" onclick="validateString();">		
+				
+			</div>
+//-->			
+			
+			<div class="box-content" >
+
+				<a class="btn_while" href="#">
+					Loai 1 lnk normal
+				</a>
+
+				<a class="btn_while save_act" href="#">
+					Loai 1 lnk save
+				</a>
+
+				<a class="btn_green" href="#">
+					Loai 2 lnk normal
+				</a>
+
+				<a class="btn_green save_act" href="#">
+					Loai 2 lnk save
+				</a>
+
+				<a class="btn_green cancel_act" href="#">
+					Loai 2 lnk cancel
+				</a>
+				
+				<a class="btn_green add_act" href="#">
+					Loai 2 lnk add
+				</a>
+
+				<a class="btn_green delete_act" href="#">
+					Loai 2 lnk delete
+				</a>
+
+				<br><br>
+				
+				<a class="btn_green folder_act" href="#">
+					Loai 2 lnk delete
+				</a>
+				
+				<a class="btn_green page_act" href="#">
+					Loai 2 lnk delete
+				</a>
+				
+				<br><br>
+
+				<input type="submit" class="btn" value="Loai btn normal">
+				<input type="submit" class="btn save_act" value="Loai btn normal save">
+				
+				<br><br>
+				
+				<input type="submit" class="btn_submit" value="Loai 1 btn normal">
+				<input type="submit" class="btn_submit_green" value="Loai 1 btn normal">
+				<input type="submit" class="btn_submit save_act" value="Loai 1 btn save">
+				<input type="submit" class="btn_submit cancel_act" value="Loai 1 btn cancel">
+				<input type="submit" class="btn_submit add_act" value="Loai 1 btn add">
+				<input type="submit" class="btn_submit delete_act" value="Loai 1 btn delete">
+
+				<br><br>
+
+				<input type="submit" class="btn_pay" value="Loai 2 btn normal">
+				<input type="submit" class="btn_pay save_act" value="Loai 2 btn save">
+				<input type="submit" class="btn_pay cancel_act" value="Loai 2 btn cancel">				
+				<input type="submit" class="btn_pay add_act" value="Loai 2 btn add">
+				<input type="submit" class="btn_pay delete_act" value="Loai 2 btn delete">				
+		
+				<br><br>So Sanh<br><br>
+				
+				<a class="btn_green" href="#">
+					Loai 2 lnk normal
+				</a>
+				<input type="submit" class="btn_submit_green" value="Loai 1 btn normal">
+				
+			</div>
+			
+		
+
+		
+		</div>
+		<!-- End Right //-->	
+		
+		<div class="clearer"></div>
+		
+	</div>
+	<!-- End Page Body //-->	
+	
+	<div id="footer"><p>&copy; <a href="http://www.sebastiansulinski.co.uk/" title="Web Desiger East Sussex">Web Designer East Sussex</a></p></div> 
+</div>	
+
+
+<script type="text/javascript">
+	var menu=new menu.dd("menu");
+	menu.init("menu","menuhover");
+</script>
+
+
+<!--	
+	Cau truc site
+	
+	<div id="wrapper">
+		<div id="page-header"></div>
+		<div id="main_menu"></div>
+		<div id="page-body">
+			<div id="left"></div>
+			<div id="right"></div>
+			<div class="clearer"></div>
+		</div>
+		<div id="footer"><p>©</p></div>
+	</div>	
+
+-->
+</body>
+</html>

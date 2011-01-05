@@ -1,0 +1,45 @@
+<?php 
+	$varCssClassID = 1;
+	$varBullet = '';
+	switch ($this->level)
+	{
+		case 1:
+			$varCssClassID = 3;
+			break;
+		case 2:
+			$varBullet = "&bull;&nbsp;&nbsp;";
+			break;
+		case 3:
+			$varBullet= "&loz;&nbsp;&nbsp;";
+			break;			
+		default:
+			$varBullet= "&loz;&nbsp;&nbsp;";
+	}
+	$varMenuContent = "<div style='padding-left:" . 10 * $this->level . "px'>" . $varBullet;
+	$varMenuContent .= $this->escape($this->rowObject->name);
+	$varMenuContent .= "</div>";
+	
+	$varOrderTextBox = "<div style='padding-left:" . 10 * ($this->level - 1) . "px'>";
+	$varOrderTextBox .=	'<input id="order" class="order_field" name="order[' . $this->escape($this->rowObject->menu_id) . ']"';
+	$varOrderTextBox .=	'value="' . $this->escape($this->rowObject->order) . '" size="2" type="text">';	
+	$varOrderTextBox .= "</div>";
+?>
+<tr class="rowBlue_0<?= $varCssClassID ?>">
+	<td align="center">
+		<input 
+			id="checkbox" 
+			name="checkbox[]"
+			value="<?=$this->escape($this->rowObject->menu_id);?>"
+			onclick="doCheckOne(document.frmData)" 
+			type="checkbox"> 
+	</td>
+	<td><?= $varMenuContent; ?></td>
+	<td><?= $this->rowObject->site_menu_link; ?></td>
+	<td><?=$varOrderTextBox?></td>
+	<td align="center">
+		<?= $this->renderStatusLink($this->rowObject->menu_id,$this->currentControllerUrl . '/switch-status/id/' . $this->rowObject->menu_id,$this->rowObject->active,false); ?>
+		<?= $this->renderEditLink($this->currentControllerUrl . '/edit/id/' . $this->rowObject->menu_id); ?>
+		<?= $this->renderDeleteLink($this->currentControllerUrl . '/delete/id/' . $this->rowObject->menu_id); ?>	
+	</td>
+</tr>
+
