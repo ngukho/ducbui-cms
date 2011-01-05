@@ -1,0 +1,37 @@
+Hien dang su dung ZEND FRAMEWORK 1.8.2
+
+Da thu dung version 1.10.2 nhung he thong to ra rat cham chap
+
+Day la nhung file thu vien da dung v1.10.2 chep de len v1.8.2
+
+	Zend\Controller\Request\Http.php -- Dung v1.10.2
+	
+	
+	
+Hien tai da xoa mot so thu vien cua Zend trong thu muc library , cac thu vien do la :
+
+	Zend_Currency
+	Zend_Console
+	Zend_Dojo
+	Zend_Dom
+	Zend_Gdata
+	Zend_InfoCard
+	Zend_Ldap
+	Zend_Memory
+	Zend_Mime
+	Zend_Measure
+	Zend_Navigation
+	Zend_OpenId
+	Zend_ProgressBar
+	Zend_Rest
+	Zend_Search_Lucene
+	Zend_Soap
+	Zend_Server
+	Zend_Service
+	Zend_Test
+	Zend_Text
+	Zend_TimeSync
+	Zend_Wildfire
+	Zend_XmlRpc
+	Zend_Pdf
+	
