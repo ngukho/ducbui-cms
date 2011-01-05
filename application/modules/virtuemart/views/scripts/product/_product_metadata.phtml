@@ -1,0 +1,11 @@
+<table id="table_form" width="100%" border="0" cellpadding="0" cellspacing="1" >
+
+<?php
+			
+    echo $this->formRow("Title :", $this->formText('metatags_title', $this->rowProduct->metatags_title,array('size'=>35)));
+	echo $this->formRow("Keywords :",$this->formTextarea('metatags_keywords',$this->rowProduct->metatags_keywords,array('rows'=>'8','cols'=>'100%')),null,null,true);	
+	echo $this->formRow("Description :",$this->formTextarea('metatags_description',$this->rowProduct->metatags_description,array('rows'=>'8','cols'=>'100%')),null,null,true);		
+
+?>			
+			
+</table>

@@ -1,0 +1,115 @@
+<? echo $this->render("category/_header.phtml"); ?>
+
+<form action="<?= $this->currentActionUrl . '/cPath/' . $this->cPath . '/cId/' . $this->cId; ?>" id="frmCats" name="frmCats" method="POST" enctype="multipart/form-data">
+
+<input type="hidden" name="cat_id" value="<?= $this->rowCat->cat_id; ?>">
+<input type="hidden" name="parent_id" value="<?= $this->rowCat->parent_id; ?>">
+<input type="hidden" name="image" value="<?= $this->rowCat->image; ?>">
+
+<div class="box-content">
+	<span style="font-size:13px;font-weight:bold;"><?= $this->breadCrumbs; ?></span>
+</div>
+
+<div class="box-content" style="padding:4px 0px;">
+	
+	<div class="floatRight">
+		<?php
+			echo $this->formSubmit('submit','  Save  ',array('class'=>'btn_submit save_act'));
+			$cancelUrl = $this->currentModuleUrl . '/category-product/index/cPath/' . $this->cPath . '/cId/' . $this->rowCat->parent_id; 
+			echo '&nbsp;' . $this->formButton('cancel','Cancel',array('class'=>'btn_submit cancel_act','onclick'=>"location.href = '{$cancelUrl}'")); 
+		?>
+	</div>
+	Go : <?= $this->showSelectCats('sel_category',$this->t('/ TOP'),$this->cId,array("onchange" => "javascript:location.href = \"{$this->currentModuleUrl}/category-product/index/cId/\" + this.value;")); ?>
+</div>
+
+<div align="right" class="box-content">
+
+	<div id="tabs">
+		<ul>
+			<li><a href="#tabs-1"><?= $this->t('General Information'); ?></a></li>
+			<li><a href="#tabs-2"><?= $this->t('Metadata'); ?></a></li>
+		</ul>
+		<div id="tabs-1">
+			
+			<table id="table_form" width="100%" border="0" cellpadding="0" cellspacing="1" >
+			
+			<?php
+				echo $this->FormRow("Category Name :",$this->formText('name',$this->h($this->rowCat->name,'edit'),array('class'=>'required','size'=>60)),true);
+				$image_html = '';
+				$class_css = 'rowBlue_02';
+				if(!empty($this->rowCat->image))
+				{
+					$class_css .= ' align_top';
+					$image_html .= "<br><br>";
+					$image_html .= "<img border=0 src='" . BASE_URL . '/' . DIR_UPLOAD_MEDIA .  "/{$this->rowCat->image}' width='100' id='img_status_2'>";
+					$image_html .= "&nbsp;&nbsp;<a class='base' onclick='deleteRow(\"" . $this->currentControllerUrl . '/delete-image/cPath/' . $this->cPath .'/cId/' . $this->rowCat->cat_id . "\",\"Do you want to delete this image ?\")' href='javascript:void(0);'>Delete Image</a>";
+				}								
+			?>
+				<tr>
+					<td class="rowBlue_02 align_top"><label>Description :</label></td>
+					<td class="rowBlue_01">
+						<?php $this->FckEditor('description', $this->rowCat->description, 200, '100%', true); ?>
+					</td>
+				</tr>
+			
+				<tr>
+					<td class="<?= $class_css; ?>"><label><?= $this->t('Image :');?></label></td>
+					<td class="rowBlue_01">
+						<input type="file" id="field_image" name="field_image">
+						<?php
+							if(!empty($image_html)) echo $image_html;
+						?>
+					</td>
+				</tr>			
+				
+			<?php 
+				echo $this->FormRow("Order :",$this->formText('order',$this->rowCat->order,array('size'=>5)));				
+				echo $this->FormRow("Available :",$this->formCheckbox('active', intval($this->rowCat->active)));
+			?>				
+			
+			</table>
+
+		</div>
+		
+		<div id="tabs-2">
+			<table id="table_form" width="100%" border="0" cellpadding="0" cellspacing="1" >
+
+			<?php
+			
+    echo $this->FormRow("Title :", $this->formText('metatags_title', $this->rowCat->metatags_title,array('size'=>35)));
+	echo $this->FormRow("Keywords :",$this->formTextarea('metatags_keywords',$this->rowCat->metatags_keywords,array('rows'=>'8','cols'=>'75')),null,null,true);	
+	echo $this->FormRow("Description :",$this->formTextarea('metatags_description',$this->rowCat->metatags_description,array('rows'=>'8','cols'=>'75')),null,null,true);		
+
+			?>			
+			
+			</table>
+
+		</div>
+	</div>		
+	
+</div>
+
+</form>
+<script language="JavaScript">
+$(document).ready(function(){
+	$("#tabs").tabs();
+    $("#frmCats").validate();
+});
+
+//$().ready(function() {
+//	
+//	// validate signup form on keyup and submit
+//	$("#frmParams").validate({
+//		rules: {
+//			name: "required",
+//			value: "required"
+//		},
+//		messages: {
+//			name: "Please enter key name !",
+//			value: "Please enter param value"
+//		}
+//	});
+//
+//});
+
+</script>

@@ -1,0 +1,22 @@
+# Language File – BACKEND
+# ENGLISH
+# ----- layout -----
+"Digitalus CMS";"Digitalus CMS"
+
+
+# Default language rules 
+"required";"(*) required"
+"isset";"The %s field must have a value."
+"valid_email";"The email address is invalid."
+"valid_url";"The %s field must contain a valid URL."
+"valid_ip";"The %s field must contain a valid IP."
+"min_length";"The %s field must be at least %s characters in length."
+"max_length";"The %s field can not exceed %s characters in length."
+"exact_length";"The %s field must be exactly %s characters in length."
+"alpha";"The %s field may only contain alphabetical characters."
+"alpha_numeric";"The %s field may only contain alpha-numeric characters."
+"alpha_dash";"The %s field may only contain alpha-numeric characters, underscores, and dashes."
+"numeric";"The %s field must contain a number."
+"integer";"The %s field must contain an integer."
+"matches";"The %s field does not match the %s field."
+

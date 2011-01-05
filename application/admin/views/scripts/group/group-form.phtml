@@ -1,0 +1,86 @@
+<? echo $this->render("group/_header.phtml"); ?>
+
+<form action="<?= $this->currentActionUrl; ?>" id="frmGroups" name="frmGroups" method="POST">
+<input type="hidden" name="group_id" value="<?= $this->rowGroup->group_id; ?>">
+<div align="right" class="box-content">
+
+	<fieldset>
+			<legend>Form <?= $this->title_action; ?></legend>
+			
+			<table id="table_form" width="100%" border="0" cellpadding="0" cellspacing="1" >
+			
+			<?php
+				echo $this->FormRow("Group Name :",$this->formText('group_name',$this->rowGroup->group_name,array('class'=>'required','size'=>35)),true);
+				echo $this->FormRow("Role :",$this->formText('role',$this->rowGroup->role,array('class'=>'required','size'=>35)),true);
+//				echo $this->FormRow("Group :",$this->formTextarea('value',$this->rowParam->value,array('class'=>'required','rows'=>'8','cols'=>'60')),true,null,true);
+			    echo $this->FormRow("Level :",$this->formText('level', intval($this->rowGroup->level),array('size'=>5)));
+			?>
+			
+			<? if(strtolower($this->title_action) == 'add') :?>
+				<tr>
+					<td class="rowBlue_02"><label>Copy Acl From Group :</label></td>
+					<td class="rowBlue_01">
+						<select style="width: 150px;" id="source_group_id" name="source_group_id" class="valid">
+							<option label="-- No Role --" value="">-- No Role --</option>
+							<?	foreach ($this->rsGroups as $row) :	?>
+									<option label="<?= $row->group_name; ?>" value="<?= $row->group_id; ?>"><?= $row->group_name; ?></option>			
+							<?	endforeach; ?>
+						</select>
+					</td>
+				</tr>									
+			<? endif; ?>
+			
+				<tr>
+					<td class="rowBlue_02">&nbsp;</td>
+					<td class="rowBlue_01">
+						The higher level can manage the lower.<br>
+						The following levels are active in the system:<br/>
+						<table cellspacing="5" style="width:400px;margin:5px;border:solid 1px #9fd6a7;">
+							<tr style="font-weight: bold;">
+								<td>Groupname</td><td>Level</td>
+							</tr>
+							<?	foreach ($this->rsGroups as $row) :	?>
+								<tr>
+									<td><?= $row->group_name; ?></td><td><?= $row->level; ?></td>			
+								</tr>
+							<?	endforeach; ?>
+						</table>
+					</td>
+				</tr>						
+			
+			<?php
+				$button_control = $this->formSubmit('submit','  Save  ',array('class'=>'btn_submit'));
+				$button_control .= '&nbsp' . $this->formButton('cancel','Cancel',array('class'=>'btn_submit','onclick'=>"location.href = '{$this->currentControllerUrl}'"));
+				echo $this->FormRow('&nbsp;',$button_control);
+			?>
+
+
+			</table>
+				
+	</fieldset>
+
+</div>
+
+</form>
+<script language="JavaScript">
+$(document).ready(function(){
+    $("#frmGroups").validate();
+});
+
+//$().ready(function() {
+//	
+//	// validate signup form on keyup and submit
+//	$("#frmParams").validate({
+//		rules: {
+//			name: "required",
+//			value: "required"
+//		},
+//		messages: {
+//			name: "Please enter key name !",
+//			value: "Please enter param value"
+//		}
+//	});
+//
+//});
+
+</script>

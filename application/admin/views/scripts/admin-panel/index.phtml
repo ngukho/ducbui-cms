@@ -1,0 +1,52 @@
+<? echo $this->render("admin-panel/_header.phtml"); ?>
+
+<form action="<?= $this->currentControllerUrl; ?>/delete-all" id="frmData" name="frmData" method="POST" onsubmit="return CheckDeleteAll();">
+
+<div align="right" class="box-content">
+	<a href="<?= $this->currentControllerUrl; ?>/add" class="btn_green">
+		Add New
+	</a>
+	<input type="submit" value="Delete" name="" id="" class="btn_submit_green"/>
+</div>
+
+<div class="box-content">
+
+	<table id="show_data" width="100%" border="0" cellpadding="0" cellspacing="1">
+	<tr>
+		<th width="2%" align="center"><input id="checkboxAll" name="checkboxAll" onclick="doCheckAll(document.frmData);" type="checkbox"></th>
+		<th width="20%"><?= $this->titleTX ?></th>
+		<th width="">Description</th>
+		<th width="10%">Logo</th>
+		<th width="5%"><?= $this->orderTX ?><a class="save_action" href="javascript:void(0);" onclick="saveOrder($('#frmData'),'<?= $this->currentControllerUrl?>/save-order');"/></th>
+		<th width="6%">Action</a></th>
+	</tr>
+	<?
+		$i=1;
+		foreach($this->rsAdminPanels as $rowAdminPanel) :
+	?>
+		<tr class="<?= ($i==1)?' rowBlue_01':'rowBlue_02'; ?>">
+			<td align="center">
+				<input id="checkbox" name="checkbox[]" value="<?= $rowAdminPanel->admin_panel_id; ?>" onclick="doCheckOne(document.frmData);" type="checkbox"> 
+			</td>
+			<td><?= $this->h($rowAdminPanel->title); ?></td>
+			<td><?= $this->h($rowAdminPanel->description); ?></td>
+			<td><?= $rowAdminPanel->logo ?></td>
+			<td align="center"><input type="text" class="order_field" size="3" value="<?= $rowAdminPanel->order; ?>" name="order[<?= $rowAdminPanel->admin_panel_id; ?>]" id="order"/></td>
+			<td align="center">
+				<?= $this->renderStatusLink($rowAdminPanel->admin_panel_id,$this->currentControllerUrl . '/switch-status/id/' . $rowAdminPanel->admin_panel_id,$rowAdminPanel->active); ?>
+				<?= $this->renderEditLink($this->currentControllerUrl . '/edit/id/' . $rowAdminPanel->admin_panel_id); ?>
+				<?= $this->renderDeleteLink($this->currentControllerUrl . '/delete/id/' . $rowAdminPanel->admin_panel_id); ?>
+			</td>
+		</tr>
+						
+	<? 
+			$i=-$i;
+		endforeach;
+	?>			
+	</table>		
+
+</div>
+
+</form>
+
+

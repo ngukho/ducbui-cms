@@ -1,0 +1,455 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Form 1</title>
+
+<script language="JavaScript" type="text/javascript" src="./js/jquery-1.3.2.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="./js/jquery-ui-1.7.2.custom.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="./js/gen_validatorv2.js"></script>
+<script language="JavaScript" type="text/javascript" src="./js/ajaxcontent.js"></script>
+<script language="JavaScript" type="text/javascript" src="./js/application.js"></script>
+
+<link rel="stylesheet" type="text/css" media="screen" href="./css/admin.css">
+<link rel="stylesheet" type="text/css" media="screen" href="./css/jquery-ui-1.7.2.custom.css">
+
+</head>
+
+<body>
+
+
+	<div id="page-header"><h1><label class="member"><a href="#">hungchung</a></label> | <a href="#">Logout</a></h1></div>
+	<div id="main_menu">
+
+<ul class="menu" id="menu">
+	<li><a href="#" class="menulink">Dropdown One</a>
+		<ul>
+			<li><a href="#">Navigation Item 1</a></li>
+			<li>
+				<a href="#" class="sub">Navigation Item 2</a>
+				<ul>
+					<li class="topline"><a href="#">Navigation Item 1</a></li>
+					<li><a href="#">Navigation Item 2</a></li>
+					<li><a href="#">Navigation Item 3</a></li>
+					<li><a href="#">Navigation Item 4</a></li>
+					<li><a href="#">Navigation Item 5</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#" class="sub">Navigation Item 3</a>
+				<ul>
+					<li class="topline"><a href="#">Navigation Item 1</a></li>
+					<li><a href="#">Navigation Item 2</a></li>
+					<li>
+						<a href="#" class="sub">Navigation Item 3</a>
+						<ul>
+							<li class="topline"><a href="#">Navigation Item 1</a></li>
+							<li><a href="#">Navigation Item 2</a></li>
+							<li><a href="#">Navigation Item 3</a></li>
+							<li><a href="#">Navigation Item 4</a></li>
+							<li><a href="#">Navigation Item 5</a></li>
+							<li><a href="#">Navigation Item 6</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Navigation Item 4</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Navigation Item 4</a></li>
+			<li><a href="#">Navigation Item 5</a></li>
+		</ul>
+	</li>
+	<li><a href="#" class="menulink">Non-Dropdown</a></li>
+	<li>
+		<a href="#" class="menulink">Dropdown Two</a>
+		<ul>
+			<li><a href="#">Navigation Item 1</a></li>
+			<li>
+				<a href="#" class="sub">Navigation Item 2</a>
+				<ul>
+					<li class="topline"><a href="#">Navigation Item 1</a></li>
+					<li><a href="#">Navigation Item 2</a></li>
+					<li><a href="#">Navigation Item 3</a></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li>
+		<a href="#" class="menulink">Dropdown Three</a>
+		<ul>
+			<li><a href="#">Navigation Item 1</a></li>
+			<li><a href="#">Navigation Item 2</a></li>
+			<li><a href="#">Navigation Item 3</a></li>
+			<li><a href="#">Navigation Item 4</a></li>
+			<li><a href="#">Navigation Item 5</a></li>
+			<li>
+				<a href="#" class="sub">Navigation Item 6</a>
+				<ul>
+					<li class="topline"><a href="#">Navigation Item 1</a></li>
+					<li><a href="#">Navigation Item 2</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Navigation Item 7</a></li>
+			<li><a href="#">Navigation Item 8</a></li>
+			<li><a href="#">Navigation Item 9</a></li>
+			<li><a href="#">Navigation Item 10</a></li>
+		</ul>
+	</li>
+</ul>	
+	
+	</div>
+	
+<table id="page-body" width="100%" border="0" cellpadding="0" cellspacing="0">
+	<tr><td class="page_content">
+	
+		<div id="left">
+		 	<ul>
+				<li class="header">SYSTEM</li> 
+				<li><span class="parent">Modules</a>
+					<ul>
+						<li><a href="/admin/module"><span >Modules</span></a></li>
+						<li><a href="/admin/menu"><span >Menu Main</span></a></li>
+						<li><a href="/admin/submenu"><span class="active" >Sub menu</span></a></li>
+						<li><a href="/admin/publictemplate"><span >Public templates </span></a></li>
+						<li><a href="/admin/language"><span >Language </span></a></li>
+		  			</ul>	
+
+				</li>
+				<li><a href="/admin/menu"><span >Menu Main</span></a></li>
+				<li><a href="/admin/submenu"><span >Sub menu</span></a></li>
+				<li><a href="/admin/publictemplate"><span >Public templates </span></a></li>
+				<li><a href="/admin/language"><span >Language </span></a></li>
+		  	</ul>	
+		  	<ul>
+				<li class="header">EXTEND</li> 
+				<li><a href="/admin/advertising"><span class="parent">Advertising</span></a></li>
+				<li><a href="#"><span >Something</span></a></li>
+				<li><a href="#"><span >Something </span></a></li>
+		  	</ul>
+			<p>&nbsp;</p>
+		 	<p>&nbsp;</p>
+		 	<p>&nbsp;</p>
+		</div>
+		
+		<div id="right">		
+			<div class="introduction vtip" title="<img src='http://www.vnexpress.net/Files/Subject/3B/A1/59/55/chumanh42.jpg'/>">
+				<h1>Menu Management</h1>
+				<div class="sidebar">
+					<a href="#">Menu Management Tool</a> >> <a href="#">Menu 1</a>  >> <a href="#">Menu 2</a> 
+				</div>
+			</div>	
+			<div class="box-content" align="center">
+				<div class="error vtip" style="width:300px;" title="Vertigo Tip by www.vertigo-project.com !">		
+					- Loi thu nhat ne ba oi Bui Van Tien Duc Loi thu nhat ne ba oi Bui Van Tien Duc <br>
+					- Loi thu nhat ne ba oi Bui Van Tien Duc <br>
+					- Loi thu nhat ne ba oi Bui Van Tien Duc <br>
+				</div>	
+			</div>	
+			<div class="info vtip" title="Vertigo Tip by www.vertigo-project.com !">
+				Luu du lieu thanh cong roi ban oi
+			</div>	
+			
+
+					<div class="box-information">
+							<div class="title">Hop thong bao thanh cong</div>
+							-  Luu du lieu thanh cong roi ban oi<br />
+					</div>
+
+				<br>
+
+					<div class="box-error">
+							<div class="title">Hop thong bao loi</div>
+								-  Luu du lieu thanh cong roi ban oi<br />
+								-  Luu du lieu thanh cong roi ban oi<br />
+								-  Luu du lieu thanh cong roi ban oi<br />
+								-  Luu du lieu thanh cong roi ban oi<br />
+								-  Luu du lieu thanh cong roi ban oi<br />								
+					</div>
+
+
+			
+		
+		<div class="box-content">
+			<fieldset>
+				<legend>Form add</legend>
+
+			<form name="moduleForm" id="moduleForm" action="/admin/menu/index/add" method="post" onsubmit="return;">		
+			
+				<table id="table_form" width="100%" border="0" cellpadding="0" cellspacing="1" >
+				  <tr>
+					<td width="35%" class="rowBlue_02">
+						<label>Menu name</label>					
+					</td> 
+					<td class="rowBlue_01"> 
+						<input type="text" class="vtip" title="Vertigo Tip" name="mainMenuName" id="mainMenuName" value="" size="30"><span class="required_field">*</span>
+					</td>
+				  </tr> 
+				  
+				   <tr>
+					<td width="35%" class="rowBlue_02">
+						<label>Code</label>					
+					</td> 
+					<td class="rowBlue_01"> 
+						<input type="text" name="code" id="code" value="" size="10"><span class="required_field">*</span>						
+					</td>
+				   <tr>
+					<td width="35%" class="rowBlue_02">
+						<label>Date - Time</label>					
+					</td> 
+					<td class="rowBlue_01"> 
+						<input type="text" name="datetime" id="datetime" value="" size="15"><span class="required_field">*</span>						
+					</td>
+				  </tr>
+				  <tr>
+					<td width="35%" class="rowBlue_02">
+						<label>Link </label>					
+					</td> 
+					<td class="rowBlue_01"> 
+						<input type="text" name="linkDirect" id="linkDirect" value="" size="40"><span class="required_field">*</span>	
+					</td>
+				  </tr>
+				  <tr>
+
+					<td width="35%" class="rowBlue_02 align_top">
+						<label>Menu List</label>					
+					</td> 
+					<td class="rowBlue_01"> 
+						<select name="parent" id="parent" size="15" style="width: 220px">
+    <option value="0" label=" --- Root  --- "> --- Root  --- </option>
+    <option value="1" label="+ Gioi thieu">+ Gioi thieu</option>
+    <option value="2" label="+ Training">+ Training</option>
+
+    <option value="3" label="+ News">+ News</option>
+    <option value="6" label="....|__Văn Hóa">....|__Văn Hóa</option>
+    <option value="7" label=".........|__Thời Trang">.........|__Thời Trang</option>
+    <option value="5" label=".........|__Sân Khấu Điện Ảnh">.........|__Sân Khấu Điện Ảnh</option>
+    <option value="4" label=".........|__Âm Nhạc">.........|__Âm Nhạc</option>
+    <option value="69" label=".........|__Thế Giới">.........|__Thế Giới</option>
+
+    <option value="70" label=".........|__Văn Học">.........|__Văn Học</option>
+    <option value="146" label="....|__Ô tô - Xe máy">....|__Ô tô - Xe máy</option>
+    <option value="157" label=".........|__Công Nghệ Xe">.........|__Công Nghệ Xe</option>
+    <option value="158" label=".........|__Thế Giới Ôtô">.........|__Thế Giới Ôtô</option>
+    <option value="159" label=".........|__Thế Giới Xe Máy">.........|__Thế Giới Xe Máy</option>
+    <option value="160" label=".........|__Ô tô Sành Điệu">.........|__Ô tô Sành Điệu</option>
+
+    <option value="148" label="....|__Gia Đình">....|__Gia Đình</option>
+    <option value="149" label=".........|__Gia Đình">.........|__Gia Đình</option>
+    <option value="150" label=".........|__Khỏe Đẹp">.........|__Khỏe Đẹp</option>
+    <option value="151" label=".........|__Làm Đẹp">.........|__Làm Đẹp</option>
+    <option value="152" label=".........|__Tình Yêu &amp; Hôn Nhân">.........|__Tình Yêu &amp; Hôn Nhân</option>
+
+    <option value="153" label=".........|__Ẩm Thực">.........|__Ẩm Thực</option>
+    <option value="154" label=".........|__Cẩm Nang Mùa Cưới">.........|__Cẩm Nang Mùa Cưới</option>
+    <option value="155" label=".........|__Tâm Sự">.........|__Tâm Sự</option>
+    <option value="156" label=".........|__Tư Vấn Tình Yêu">.........|__Tư Vấn Tình Yêu</option>
+    <option value="46" label="....|__Politics">....|__Politics</option>
+    <option value="47" label="....|__Business">....|__Business</option>
+
+    <option value="48" label="....|__Sci-Tech">....|__Sci-Tech</option>
+    <option value="49" label="....|__National">....|__National</option>
+    <option value="50" label="....|__Entertainment">....|__Entertainment</option>
+    <option value="51" label="....|__Sports">....|__Sports</option>
+    <option value="52" label="....|__World">....|__World</option>
+    <option value="53" label="....|__Education">....|__Education</option>
+
+    <option value="126" label="....|__Du Lịch">....|__Du Lịch</option>
+    <option value="137" label=".........|__Du Lịch Việt Nam">.........|__Du Lịch Việt Nam</option>
+    <option value="139" label=".........|__Quán Cuối Tuần">.........|__Quán Cuối Tuần</option>
+    <option value="140" label=".........|__Điểm Đến Thú Vị">.........|__Điểm Đến Thú Vị</option>
+    <option value="141" label=".........|__Tin Du Lịch">.........|__Tin Du Lịch</option>
+    <option value="125" label="....|__Bóng Đá">....|__Bóng Đá</option>
+
+    <option value="129" label=".........|__Anh">.........|__Anh</option>
+    <option value="130" label=".........|__Italia">.........|__Italia</option>
+    <option value="131" label=".........|__Tây Ban Nha">.........|__Tây Ban Nha</option>
+    <option value="132" label=".........|__Đức">.........|__Đức</option>
+    <option value="133" label=".........|__Tuyển Việt Nam">.........|__Tuyển Việt Nam</option>
+    <option value="134" label=".........|__Champions League">.........|__Champions League</option>
+
+    <option value="135" label=".........|__Video Clip">.........|__Video Clip</option>
+    <option value="136" label=".........|__Chuyện Của Sao">.........|__Chuyện Của Sao</option>
+    <option value="119" label="....|__Giáo Dục">....|__Giáo Dục</option>
+    <option value="120" label=".........|__Tin Giáo Dục">.........|__Tin Giáo Dục</option>
+    <option value="121" label=".........|__Du Học">.........|__Du Học</option>
+    <option value="122" label=".........|__Tư Vấn Du Học">.........|__Tư Vấn Du Học</option>
+
+    <option value="42" label="....|__Xã Hội">....|__Xã Hội</option>
+    <option value="81" label=".........|__Đô Thị">.........|__Đô Thị</option>
+    <option value="80" label=".........|__Chuyên Đề">.........|__Chuyên Đề</option>
+    <option value="82" label=".........|__Lối Sống">.........|__Lối Sống</option>
+    <option value="83" label=".........|__Nhà Đất">.........|__Nhà Đất</option>
+    <option value="84" label=".........|__Nông Thôn">.........|__Nông Thôn</option>
+
+    <option value="85" label=".........|__Tin Xã Hội">.........|__Tin Xã Hội</option>
+    <option value="38" label="....|__Khoa Học">....|__Khoa Học</option>
+    <option value="145" label=".........|__CNTT">.........|__CNTT</option>
+    <option value="105" label=".........|__Khảo Cổ">.........|__Khảo Cổ</option>
+    <option value="106" label=".........|__Chuyện Đó Đây">.........|__Chuyện Đó Đây</option>
+    <option value="107" label=".........|__Tin Khoa Học">.........|__Tin Khoa Học</option>
+
+    <option value="108" label=".........|__Vũ Trụ">.........|__Vũ Trụ</option>
+    <option value="37" label="....|__Pháp Luật">....|__Pháp Luật</option>
+    <option value="96" label=".........|__Hình Sự">.........|__Hình Sự</option>
+    <option value="97" label=".........|__Thế Giới">.........|__Thế Giới</option>
+    <option value="98" label=".........|__Tin Pháp Luật">.........|__Tin Pháp Luật</option>
+    <option value="99" label=".........|__Thông Tin Xuất Nhập Cảnh">.........|__Thông Tin Xuất Nhập Cảnh</option>
+
+    <option value="34" label="....|__Việc Làm">....|__Việc Làm</option>
+    <option value="71" label=".........|__Đời Sống Công Sở">.........|__Đời Sống Công Sở</option>
+    <option value="72" label=".........|__Hướng Nghiệp">.........|__Hướng Nghiệp</option>
+    <option value="73" label=".........|__Kinh Nghiệm">.........|__Kinh Nghiệm</option>
+    <option value="74" label=".........|__Tin Tức Việc Làm">.........|__Tin Tức Việc Làm</option>
+    <option value="75" label=".........|__Tư Vấn Việc Làm">.........|__Tư Vấn Việc Làm</option>
+
+    <option value="33" label="....|__Nhà Đất">....|__Nhà Đất</option>
+    <option value="100" label=".........|__Tin Nhà Đất">.........|__Tin Nhà Đất</option>
+    <option value="101" label=".........|__Thị Trường Bất Động Sản">.........|__Thị Trường Bất Động Sản</option>
+    <option value="102" label=".........|__Kiến Trúc">.........|__Kiến Trúc</option>
+    <option value="103" label=".........|__Tư Vấn">.........|__Tư Vấn</option>
+    <option value="19" label="....|__Thế Giới">....|__Thế Giới</option>
+
+    <option value="21" label=".........|__Liên Minh Châu Âu">.........|__Liên Minh Châu Âu</option>
+    <option value="23" label=".........|__Điểm Nóng">.........|__Điểm Nóng</option>
+    <option value="45" label=".........|__Việt Nam Và Thế Giới">.........|__Việt Nam Và Thế Giới</option>
+    <option value="20" label=".........|__Đông Á">.........|__Đông Á</option>
+    <option value="22" label=".........|__Châu Mỹ">.........|__Châu Mỹ</option>
+    <option value="60" label=".........|__Chuyện lạ">.........|__Chuyện lạ</option>
+
+    <option value="61" label=".........|__ASEAN">.........|__ASEAN</option>
+    <option value="62" label=".........|__Tin Thế Giới">.........|__Tin Thế Giới</option>
+    <option value="63" label=".........|__An Ninh Thế Giới">.........|__An Ninh Thế Giới</option>
+    <option value="32" label="....|__Kinh Tế">....|__Kinh Tế</option>
+    <option value="109" label=".........|__Doanh Nghiệp">.........|__Doanh Nghiệp</option>
+    <option value="110" label=".........|__Chính Sách">.........|__Chính Sách</option>
+
+    <option value="111" label=".........|__Tin Kinh Tế">.........|__Tin Kinh Tế</option>
+    <option value="112" label=".........|__Thị Trường">.........|__Thị Trường</option>
+    <option value="113" label=".........|__Tài Chính">.........|__Tài Chính</option>
+    <option value="114" label=".........|__Thế Giới">.........|__Thế Giới</option>
+    <option value="115" label=".........|__Thương Mại">.........|__Thương Mại</option>
+    <option value="116" label=".........|__Việt Nam">.........|__Việt Nam</option>
+
+    <option value="43" label="....|__Sức Khỏe">....|__Sức Khỏe</option>
+    <option value="76" label=".........|__An Toàn Thực Phẩm">.........|__An Toàn Thực Phẩm</option>
+    <option value="77" label=".........|__Giới Tính">.........|__Giới Tính</option>
+    <option value="78" label=".........|__Những Điều Nên Biết">.........|__Những Điều Nên Biết</option>
+    <option value="79" label=".........|__Tin Sức Khoẻ">.........|__Tin Sức Khoẻ</option>
+    <option value="44" label="....|__Giải Trí">....|__Giải Trí</option>
+
+    <option value="64" label=".........|__Âm Nhạc">.........|__Âm Nhạc</option>
+    <option value="65" label=".........|__Giải Trí Tổng Hợp">.........|__Giải Trí Tổng Hợp</option>
+    <option value="66" label=".........|__Thế Giới Sao">.........|__Thế Giới Sao</option>
+    <option value="67" label=".........|__Phim Ảnh">.........|__Phim Ảnh</option>
+    <option value="68" label=".........|__Truyện Cười">.........|__Truyện Cười</option>
+    <option value="147" label=".........|__Chiêm tinh trong tuần">.........|__Chiêm tinh trong tuần</option>
+
+    <option value="54" label="....|__Travel">....|__Travel</option>
+    <option value="18" label="....|__Thể Thao">....|__Thể Thao</option>
+    <option value="86" label=".........|__Chân Dung">.........|__Chân Dung</option>
+    <option value="87" label=".........|__Chuyện Hậu Trường">.........|__Chuyện Hậu Trường</option>
+    <option value="88" label=".........|__Đua Xe">.........|__Đua Xe</option>
+    <option value="89" label=".........|__Thể Thao Tổng Hợp">.........|__Thể Thao Tổng Hợp</option>
+
+    <option value="90" label=".........|__Tin Thể Thao">.........|__Tin Thể Thao</option>
+    <option value="56" label="+ Classified">+ Classified</option>
+    <option value="57" label="....|__Deals-Specials">....|__Deals-Specials</option>
+    <option value="58" label="....|__Freebies">....|__Freebies</option>
+    <option value="59" label="....|__Coupon">....|__Coupon</option>
+</select>					</td>
+
+				  </tr>
+				  <tr>
+					<td width="35%" class="rowBlue_02">
+						<label>Public template </label>					
+					</td> 					
+					<td class="rowBlue_01">
+						<select name="publicTemplateID" id="publicTemplateID">
+						    <option value="0" label=" --- Choice a item --- "> --- Choice a item --- </option>
+						    <option value="1" label="Mau xanh">Mau xanh</option>
+						    <option value="2" label="Mau Vang">Mau Vang</option>
+						</select>					
+					</td>
+				  </tr>
+				  <tr>
+				    <td class="rowBlue_02">
+						<label>Order</label>
+					</td>
+				    <td class="rowBlue_01">
+				    	<input type="text" name="mainMenuOrder" id="mainMenuOrder" value="" size="5"><span class="required_field">*</span>	
+				    </td>
+			 	</tr>
+
+				<tr>
+				    <td class="rowBlue_02">
+						<label>Show homepage ?</label>					
+					</td>
+				    <td class="rowBlue_01">
+						<label><input type="radio" name="showIndex" value="1">&nbsp; Yes &nbsp;&nbsp;<input type="radio" name="showIndex" value="0">&nbsp; No</label>
+				    </td>
+  				</tr>
+				
+				<tr>
+				    <td class="rowBlue_02">
+						<label>Order in Homepage</label>					
+					</td>
+				    <td class="rowBlue_01">
+				    	<input type="text" name="orderIndex" id="orderIndex" value="" size="5"><span class="required_field">*</span>	
+				    </td>
+  				</tr>
+  				 <tr>
+				    <td class="rowBlue_02">
+						<label>Status</label>					
+					</td>
+				    <td class="rowBlue_01">
+						<label><input type="radio" name="status" value="1">&nbsp; Active &nbsp;&nbsp;<input type="radio" name="status" value="0">&nbsp; Inactive</label>
+				    </td>
+  				</tr>
+				  <tr>
+				    <td class="rowBlue_02">
+						<label>Language</label>
+					</td>
+				    <td class="rowBlue_01">
+				    	<select name="languageCategoryID" id="languageCategoryID">
+						    <option value="0" label=" --- Choice a item --- "> --- Choice a item --- </option>
+						    <option value="6" label="Tiếng Việt">Tiếng Việt</option>
+						    <option value="7" label="English">English</option>
+						</select>				    
+					</td>
+ 				 </tr>
+ 				 <tr>
+					<td class="rowBlue_02">&nbsp;</td>
+					<td class="rowBlue_01">
+						 <input type="submit" class="btn_submit vtip" title="Vertigo Tip" name="submit" id="submit" value="Submit All" onclick="validateString();">
+						 
+						 
+						 
+					</td>
+				</tr>		
+				</table>
+				
+			 </form>
+		</fieldset>
+		<br>
+		<input type="submit" name="submit" class="btn_pay" value="Submit All" onclick="validateString();">		
+		<br>
+		</div>
+	</div>	
+	</td></tr>
+
+</table>
+	
+<script language="JavaScript" type="text/javascript">
+	$(function() {
+		$("#datetime").datepicker();
+		$('#datetime').datepicker('option', {dateFormat:"dd/mm/yy"}); 		
+	});
+
+	var menu=new menu.dd("menu");
+	menu.init("menu","menuhover");
+</script>
+
+</body>
+</html>
+
+

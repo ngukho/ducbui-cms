@@ -1,0 +1,29 @@
+<div class="left-content">
+	<ul>
+		<li class="header"><?= $this->getTranslation('Static Content Pages'); ?></li> 
+		
+		<?php
+			$i=1;
+			foreach($this->rsContents as $rowContent) :
+				if($rowContent->content_id == $this->id) :
+		?>		
+				<li>
+					<span class="active"><?= $this->h($rowContent->title); ?> </span>
+				</li>		
+				
+		<?php	else :	?>
+				<li>
+					<a href="<?= $this->currentControllerUrl . '/edit/id/' . $rowContent->content_id ?>">
+						<span><?= $this->h($rowContent->title); ?> </span>
+					</a>
+				</li>		
+		<?php	endif;	?>				
+				
+		<?php 
+				$i=-$i;
+			endforeach;
+		?>			
+	</ul>	
+				  
+<!-- END class="left-content" -->
+</div>		

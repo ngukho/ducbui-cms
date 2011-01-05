@@ -1,0 +1,74 @@
+<?php $this->placeholder('Digitalus')->captureStart('SET', 'tpl_RightTitle'); ?>
+<div class="introduction">
+	<h1>Groups Management</h1>
+	<div class="sidebar">
+		List Groups
+	</div>
+</div>
+<?php $this->placeholder('Digitalus')->captureEnd(); ?>
+
+
+			<form action="#">
+			
+				<div class="box-content" align="right">
+					<a class="btn_green" href="http://vietnamsuperpage.com/admin/question/index/add">Button</a>
+				</div>
+		
+		
+				<table id="show_data" width="100%" border="0" cellpadding="0" cellspacing="1">
+					<tr>
+						<th width="4%" align="center"><input id="checkboxAll" name="checkboxAll" onclick="doCheckAll(document.frmQuestion)" type="checkbox"></th>
+						<th width="">Content</th>
+						<th width="">Language</th>
+						<th width="7%">Order</th>
+						<th width="10%">Action</th>
+					</tr>
+					<tr class="rowBlue_01">
+						<td align="center">
+							<input id="checkbox" name="checkbox[]" value="1" onclick="doCheckOne(document.frmQuestion)" type="checkbox"> 
+						</td>
+						<td>Tên trường học đầu tiên của bạn là  gì? </td>
+						<td>Tiếng Việt </td>
+						<td align="center">
+							<input id="order" name="order[1]" value="0" size="1" type="text" class="order_field"> 
+						</td>
+						<td align="center">
+							<a href=""><img src="<?= BASE_IMAGES ?>/btnActive.gif" alt="Active" border="0"></a>
+							<a href=""><img src="<?= BASE_IMAGES ?>/btnEdit.gif" alt="Edit" border="0"></a> 
+							<a href="#"><img src="<?= BASE_IMAGES ?>/btnDelete.gif" alt="Delete" border="0"></a>
+						</td>
+					</tr>
+					<tr class="rowBlue_02">
+						<td align="center">
+							<input id="checkbox" name="checkbox[]" value="18" onclick="doCheckOne(document.frmQuestion)" type="checkbox"> 
+						</td>
+						<td>Nơi sinh của mẹ bạn ở đâu? </td>
+						<td>Tiếng Việt </td>
+						<td align="center">
+							<input id="order" name="order[18]" value="4" size="1" type="text" class="order_field"> 
+						</td>
+						<td align="center">
+							<a href=""><img src="<?= BASE_IMAGES ?>/btnActive.gif" alt="Active" border="0"></a>
+							<a href=""><img src="<?= BASE_IMAGES ?>/btnEdit.gif" alt="Edit" border="0"></a> 
+							<a href="#"><img src="<?= BASE_IMAGES ?>/btnDelete.gif" alt="Delete" border="0"></a>
+						</td>
+					</tr>
+					
+					<tr class="rowBlue_02">
+						<td align="center">
+							<input id="checkbox" name="checkbox[]" value="18" onclick="doCheckOne(document.frmQuestion)" type="checkbox"> 
+						</td>
+						<td>Nơi sinh của mẹ bạn ở đâu? </td>
+						<td>Tiếng Việt </td>
+						<td align="center">
+							<input id="order" name="order[18]" value="4" size="1" type="text" class="order_field"> 
+						</td>
+						<td align="center">
+							<a href=""><img src="<?= BASE_IMAGES ?>/btnActive.gif" alt="Active" border="0"></a>
+							<a href=""><img src="<?= BASE_IMAGES ?>/btnEdit.gif" alt="Edit" border="0"></a> 
+							<a href="#"><img src="<?= BASE_IMAGES ?>/btnDelete.gif" alt="Delete" border="0"></a>
+						</td>
+					</tr>
+					
+				</table>
+			</form>

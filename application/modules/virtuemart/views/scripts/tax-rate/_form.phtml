@@ -1,0 +1,54 @@
+<form action="<?= $this->currentActionUrl; ?>" id="frmTaxRates" name="frmTaxRates" method="POST">
+<input type="hidden" name="tax_rate_id" value="<?= $this->rowTaxRate->tax_rate_id; ?>">
+
+<div align="right" class="box-content">
+
+	<fieldset>
+			<legend>Form <?= $this->title_action; ?></legend>
+			
+			<table id="table_form" width="100%" border="0" cellpadding="0" cellspacing="1" >
+			
+			<?php
+				echo $this->FormRow("Tax Rate Name :",$this->formText('name',$this->h($this->rowTaxRate->name,'edit'),array('class'=>'required','size'=>60)),true);
+				echo $this->FormRow("Value :",$this->formText('tax_rate',$this->h($this->rowTaxRate->tax_rate,'edit'),array('class'=>'required','size'=>10)) . '<b> %</b> ',true);
+
+				echo $this->FormRow("Description :",$this->formTextarea('description',$this->rowTaxRate->description,array('rows'=>'8','cols'=>'75')),null,null,true);					
+				
+				echo $this->FormRow("Order :",$this->formText('order',$this->rowTaxRate->order,array('size'=>5)));				
+				echo $this->FormRow("Available :",$this->formCheckbox('active', intval($this->rowTaxRate->active)));
+				
+				$button_control = $this->formSubmit('submit','  Save  ',array('class'=>'btn_submit save_act'));
+				$button_control .= '&nbsp' . $this->formButton('cancel','Cancel',array('class'=>'btn_submit cancel_act','onclick'=>"location.href = '{$this->currentControllerUrl}'"));
+				echo $this->FormRow('&nbsp;',$button_control);
+			?>
+
+			</table>
+				
+	</fieldset>
+
+</div>
+
+</form>
+
+<script language="JavaScript">
+$(document).ready(function(){
+    $("#frmTaxRates").validate();
+});
+
+//$().ready(function() {
+//	
+//	// validate signup form on keyup and submit
+//	$("#frmParams").validate({
+//		rules: {
+//			name: "required",
+//			value: "required"
+//		},
+//		messages: {
+//			name: "Please enter key name !",
+//			value: "Please enter param value"
+//		}
+//	});
+//
+//});
+
+</script>

@@ -1,0 +1,47 @@
+<? $this->render('menu/_header.phtml'); ?>
+
+<form action="<?= $this->currentControllerUrl; ?>/delete-all" id="frmData" name="frmData" method="POST" onsubmit="return CheckDeleteAll();">
+
+<div class="box-content">
+	<div class="floatRight">
+		<input type="button" onclick="location.href = '<?= $this->currentControllerUrl; ?>/add';" value="<?= $this->getTranslation('Add New'); ?>" class="btn_submit_green add_act"/>		
+		<input type="submit" value="Delete" name="" id="" class="btn_submit_green delete_act"/>
+	</div>
+	Filter							
+	<select style="min-width:150px;" size="1" name="filter" id="filter" onchange="document.location = '<?= $this->currentActionUrl; ?>/cat/' + this.value;">
+	<? 
+		$selected = "";
+		if($this->currentMenu == 0) "selected='selected'";
+		echo "<option {$selected} value='0'> --- Show All --- </option>";
+		foreach ($this->menuRoot as $rowMenu) 
+		{
+			$selected = "";
+			if($rowMenu->menu_id == $this->currentMenu) $selected = "selected='selected'";
+			echo "<option {$selected} value='{$rowMenu->menu_id}'> - {$rowMenu->name}</option>";
+		}
+	?>
+	</select>		
+	<br class="clear">		
+</div>
+
+<div class="box-content">
+
+	<table id="show_data" width="100%" border="0" cellpadding="0" cellspacing="1">
+	<tr>
+		<th width="2%" align="center"><input id="checkboxAll" name="checkboxAll" onclick="doCheckAll(document.frmData);" type="checkbox"></th>
+		<th>Name</th>
+		<th width="30%">Admin Menu Link</th>
+		<th width="6%">Order<a class="save_action" href="javascript:void(0);" onclick="saveOrder($('#frmData'),'<?= $this->currentControllerUrl?>/save-order');"/></th>
+		<th width="6%">Action</a></th>
+	</tr>
+	
+	<? $this->showTreeStructural($this->menuLevelOnes,"menu/_menuRow.phtml",$order = 'order ASC',1); ?>
+	
+	</table>		
+
+</div>	
+
+</form>
+
+
+

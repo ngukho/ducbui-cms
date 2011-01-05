@@ -1,0 +1,19 @@
+<fieldset>
+	<legend>Add External Link</legend>
+	<table cellspacing="1" cellpadding="0" border="0" width="100%" id="table_form">
+		<tr>
+			<td width="25%" class="rowBlue_02"><label>External Link :</label></td>
+			<td class="rowBlue_01">
+				<input type="text" size="35" value="" id="ext_link" name="ext_link"/>
+			</td>
+		</tr>
+		<tr>
+			<td width="25%" class="rowBlue_02"></td>
+			<td class="rowBlue_01">
+				<input type="button" class="btn_submit" 
+					onclick="parent.chooseLink($('input#ext_link').val());"
+					value="  OK  " id="cmd_ext_link" name="cmd_ext_link"/>
+			</td>
+		</tr>				
+	</table>
+</fieldset>			

@@ -1,0 +1,20 @@
+<?php 
+	$varBullet = '';
+	switch ($this->categoryLevel)
+	{
+		case 1:
+			$varBullet = "&nbsp;&nbsp;";
+			break;
+		case 2:
+			$varBullet = "&nbsp;&nbsp;&nbsp;&nbsp;&bull;&nbsp;&nbsp;";
+			break;
+		case 3:
+			$varBullet= "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&loz;&nbsp;&nbsp;";
+			break;			
+	}
+	$varCategoryContent = $varBullet . $this->escape($this->category->categoryName);
+?>
+<option value="<?= $this->category->sbCategoryID ?>">
+	<?= $varCategoryContent ?>
+</option>
+

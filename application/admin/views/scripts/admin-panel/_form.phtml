@@ -1,0 +1,51 @@
+
+<form action="<?= $this->currentActionUrl; ?>" id="frmAdminPanels" name="frmAdminPanels" method="POST">
+<input type="hidden" name="admin_panel_id" value="<?= $this->rowAdminPanel->admin_panel_id; ?>">
+<div align="right" class="box-content">
+
+	<fieldset>
+			<legend>Form <?= $this->title_action; ?></legend>
+			
+			<table id="table_form" width="100%" border="0" cellpadding="0" cellspacing="1" >
+			
+			<?php
+				echo $this->FormRow("Title :",$this->formText('title',$this->h($this->rowAdminPanel->title,'edit'),array('class'=>'required','size'=>35)),true);
+				echo $this->FormRow("Description :",$this->formTextarea('description',$this->h($this->rowAdminPanel->description,'edit'),array('rows'=>'3','cols'=>'60')),false,null,true);
+				echo $this->FormRow("Order :",$this->formText('order',$this->rowAdminPanel->order,array('size'=>5)));
+			    echo $this->FormRow("Available :",$this->formCheckbox('active', intval($this->rowAdminPanel->active)));
+			    
+				$button_control = $this->formSubmit('submit','  Save  ',array('class'=>'btn_submit'));
+				$button_control .= '&nbsp' . $this->formButton('cancel','Cancel',array('class'=>'btn_submit','onclick'=>"location.href = '{$this->currentControllerUrl}'"));
+				echo $this->FormRow('&nbsp;',$button_control);
+			?>
+
+			</table>
+				
+	</fieldset>
+
+</div>
+
+</form>
+
+<script language="JavaScript">
+$(document).ready(function(){
+    $("#frmAdminPanels").validate();
+});
+
+//$().ready(function() {
+//	
+//	// validate signup form on keyup and submit
+//	$("#frmParams").validate({
+//		rules: {
+//			name: "required",
+//			value: "required"
+//		},
+//		messages: {
+//			name: "Please enter key name !",
+//			value: "Please enter param value"
+//		}
+//	});
+//
+//});
+
+</script>

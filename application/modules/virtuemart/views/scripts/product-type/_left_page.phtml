@@ -1,0 +1,29 @@
+<div class="left-content">
+	<ul>
+		<li class="header"><?= $this->getTranslation('Product Type Name'); ?></li> 
+		
+		<?php
+			$i=1;
+			foreach($this->rsProTypes as $rowType) :
+				if($rowType->type_id == $this->id) :
+		?>		
+				<li>
+					<span class="active"><?= $this->h($rowType->name); ?> </span>
+				</li>		
+				
+		<?php	else :	?>
+				<li>
+					<a href="<?= $this->currentControllerUrl . '/edit/id/' . $rowType->type_id ?>">
+						<span><?= $this->h($rowType->name); ?> </span>
+					</a>
+				</li>		
+		<?php	endif;	?>				
+				
+		<?php 
+				$i=-$i;
+			endforeach;
+		?>			
+	</ul>	
+				  
+<!-- END class="left-content" -->
+</div>		

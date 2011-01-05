@@ -1,0 +1,19 @@
+<?php
+	$html = '';
+	if(empty($this->arrPath)) {
+		$html = "Top";
+	} else {
+		$i = 1;
+		foreach ($this->arrPath as $item) 
+		{
+			if($i != count($this->arrPath))
+				$html .= "<a href='{$this->view->currentModuleUrl}/category-product/index/cId/{$item['cat_id']}' title='{$this->view->h($item['name'])}' class='base'>{$this->view->h($item['name'])}</a>" . ' > ';
+			else 
+				$html .= "{$this->view->h($item['name'])}" . ' > ';
+			$i++;				
+		}
+		$html = substr($html,0,strlen($html) - 3);
+	}
+?>
+<a href="<?= $this->view->currentModuleUrl; ?>/category-product/index/cId/0" title="<?= $this->view->t('Root'); ?>" class="base">Category/Product</a> : <?= $html; ?>
+

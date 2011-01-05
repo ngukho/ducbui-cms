@@ -1,0 +1,22 @@
+<div class="introduction">
+	<h2 class="title"><?= $this->h($this->rowAdminPanel->title); ?></h2>
+	<span class="comment"><?= $this->h($this->rowAdminPanel->description); ?></span>
+</div>
+
+<div id="cpanel">
+
+	<? foreach ($this->rsMenus as $rowMenu) :?>
+	
+		<div id="cpanel_item">
+			<div class="icon">
+				<a href="<?= $rowMenu->admin_menu_link; ?>">
+					<img border="0" align="middle" title="<?= $this->h($rowMenu->name); ?>" alt="<?= $this->h($rowMenu->name); ?>" src="<?= BASE_URL ?>/images/large_icons/<?= $rowMenu->admin_menu_img; ?>"/>
+					<span style="font-size: 11px;"><?= $this->h($rowMenu->name); ?></span>
+				</a>
+			</div>
+		</div>
+		
+	<? endforeach;?>
+							
+	<div class="clear"></div>
+</div>

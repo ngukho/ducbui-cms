@@ -1,0 +1,35 @@
+<form action="<?= $this->currentActionUrl; ?>" id="frmUser" name="frmUser" method="POST">				
+	<fieldset>
+			<legend>Form <?= $this->title_action; ?></legend>
+		
+
+			<table id="table_form" width="100%" border="0" cellpadding="0" cellspacing="1" >
+			
+			<?php
+				echo $this->FormHidden('user_id',$this->rowUser->user_id);
+				echo $this->FormRow($this->getTranslation("First Name")." :",$this->FormText('first_name',$this->rowUser->first_name,array('class'=>'required','size'=>35)),true);
+				echo $this->FormRow($this->getTranslation("Last Name")." :",$this->FormText('last_name',$this->rowUser->last_name,array('class'=>'required','size'=>35)),true);
+				echo $this->FormRow($this->getTranslation("Email")." :",$this->FormText('email',$this->rowUser->email,array('class'=>'required','size'=>40)),true);
+
+				if(strtolower($this->action) == 'add') :
+					echo $this->FormRow($this->getTranslation("Password")." :",$this->formPassword('password',null,array('class'=>'required','minlength'=>'6','size'=>25)),true);
+					echo $this->FormRow($this->getTranslation("Confirm Password")." :",$this->formPassword('confirm_password',null,array('class'=>'required','equalTo'=>'#password','size'=>25)),true);
+			    endif;				
+				
+				echo $this->FormRow($this->getTranslation("Admin Role")." :", $this->SelectAdminRole('group_id',$this->rowUser->group_id,array('style'=>'width:150px;')),true);				
+		    	echo $this->FormRow($this->getTranslation("Available")." :",$this->FormCheckbox('active', intval($this->rowUser->active)));
+
+				$button_control = $this->FormSubmit('submit',$this->getTranslation('  Save  '),array('class'=>'btn_submit save_act'));
+				$button_control .= '&nbsp' . $this->FormButton('cancel',$this->getTranslation('Cancel'),array('class'=>'btn_submit cancel_act','onclick'=>"location.href = '{$this->currentControllerUrl}'"));
+				echo $this->FormRow('&nbsp;',$button_control);
+			?>
+
+			</table>
+	</fieldset>						
+</form>	
+
+<script language="JavaScript">
+	$(document).ready(function(){
+	    $("#frmUser").validate();
+	});
+</script>

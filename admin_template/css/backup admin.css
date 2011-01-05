@@ -1,0 +1,465 @@
+/* CSS Document */
+* {
+	/* Reset browsers default margin, padding and font sizes */
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+}
+
+a, a:active, a:link, a:visited { text-decoration:none; color: #fff; }
+
+a:hover { text-decoration: underline; }
+
+body,  p, th, td, li, dd {
+	font-size: x-small;
+	voice-family: "\"}\"";
+	voice-family: inherit;
+	font-size: small
+}
+
+body {
+	/* Text-Sizing with ems: http://www.clagnut.com/blog/348/ */
+	font-family: Verdana, "Lucida Grande", Helvetica, Arial, sans-serif;
+	color: #536482;
+	background: #2a6f1b;
+	font-size: 62.5%;	/* This sets the default font size to be equivalent to 10px */
+	margin: 10px 3px;
+	min-width: 770px;
+}
+
+h1 {
+	font-family: Verdana, "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 1.70em;
+	font-weight: normal;
+	color: #41a66b;
+}
+
+h1 .member {
+	color:#FFFFFF;
+}
+
+
+h2 {
+	font-family: Verdana, "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 1.50em;
+	font-weight: normal;
+	color: #41a66b;
+}
+
+p {
+	margin-bottom: 0.7em;
+	line-height: 15px;
+	font-size: 12px;
+	text-align:justify;
+}
+
+ul {
+	list-style: disc;
+	margin: 0 10px;
+}
+
+.floatLeft { 
+	float:left; 
+}
+.floatRight { 
+	float:right; 
+}
+
+#page-header {
+	clear: both;
+	text-align: right;
+	background: url("./images/logo1.jpg") top left no-repeat;
+	height: 80px;
+	font-size: 0.85em;
+	margin-bottom: 10px;
+}
+
+label {
+	font-weight: bold;
+	white-space:nowrap;
+}
+
+input, textarea, select {
+	background-color:#ffffff;
+	border:1px solid #AFAEAA;
+	padding:2px;
+	margin:0px;
+}
+
+input:focus, textarea:focus, select:focus {
+	border: 1px solid #ea0813;
+	background-color: #e1ffea;
+	color: #156857;
+
+}
+
+input:hover, textarea:hover, select:hover {
+	border-left: 1px solid #4db25b;
+	border-top: 1px solid #4db25b;
+	border-right: 1px solid #4db25b;
+	border-bottom: 1px solid #4db25b;
+	background-color: #e1ffea;
+}
+
+.cmd_form {
+	padding:3px 10px;
+	font-weight:bold;
+	margin:0px;
+	cursor:pointer;
+}
+
+.order_field {
+	text-align:center;
+}
+
+/*******************************************************************************
+  INFORMATION , ERROR TAGS
+*******************************************************************************/
+.info{
+	font-family: tahoma;
+	font-size: 11px;
+	font-weight:bold;
+	border: solid 1px #9d9d9d; 
+	margin:5px 0px; 
+	padding:7px 10px;
+	color:#333333;
+	background:#ffdddd;
+	text-align:left;
+}
+
+.error{
+	font-family: tahoma;
+	font-size: 11px;
+	font-weight:bold;
+	border: solid 1px #9d9d9d; 
+	margin:5px 0px; 
+	padding:7px 10px;
+	color:#FFFF00;
+	background-color:#FF0000;
+	text-align:left;
+}
+/*******************************************************************************/
+
+/*******************************************************************************
+  TABS MENU
+*******************************************************************************/
+
+#tabs {
+	clear: both;
+	margin:0;
+	padding: 0;
+	line-height: normal;
+	background: #2a6f1b;
+	height: 26px;
+}
+
+#tabs ul {
+	margin:0px;
+	padding:0px;
+	list-style:none;
+	padding-left:15px;
+}
+
+#tabs li {
+	display: inline;
+	margin: 0;
+	padding: 0;
+	font-size: 11px;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+#tabs span {
+	display:block; 
+	float:left; 
+	border: solid 1px #c1e7d5; 
+	padding: 5px 15px 7px 15px; 
+	margin-left: 2px;
+	background:url(./images/bg_tabs2.gif);
+}
+
+#tabs a span {
+	display:block; 
+	float:left; 
+	border: solid 1px #c1e7d5; 
+	padding: 5px 15px 7px 15px; 
+	margin-left: 2px;
+	background:url(./images/bg_tabs1.gif);	
+}
+
+#tabs a:hover span {
+	background:url(./images/bg_tabs3.gif);
+	cursor: hand;
+}
+
+#tabs a:visited span {
+	font-size: 11px;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-decoration: none;	
+}
+
+#tabs a:link span {
+	font-size: 11px;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-decoration: none;	
+}
+#tabs a:active span {
+	font-size: 11px;
+	background:url(./images/bg_tabs3.gif);
+	color: #FFFFFF;
+	font-weight: bold;
+	text-decoration: none;	
+}
+/*******************************************************************************/
+
+/*-----------BODY---------------- */
+
+#page-body {	
+	clear: both;
+	min-width: 760px;
+	background:#FFFFFF;		
+	position: relative;	
+}
+#page-body td{	
+	padding: 10px 5px;
+}
+
+/*-----------LEFT DIV--------- */
+#left {
+	 
+	 width: 20%; 
+	 line-height: 15px;
+	 background:#e4f4e3; 
+	 float:left; 
+	 border-right: solid 1px #9fd6a7; 
+	 font-size: 11px;
+}
+
+#left ul {
+	list-style-image: none;
+	list-style-position:outside;
+	list-style-type: none;
+}
+
+#left li.header {
+	border-bottom:1px solid #327AA5;
+	color: #2a6f1b;
+	display: block;
+	list-style-type: circle;
+	font-family: Tahoma,Helvetica,sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	
+	padding: 0px 0pt 2px;	
+}
+
+#left li span {
+	color: #2a6f1b;
+	display:block;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight:normal;
+	margin:1px 0pt;
+	padding:2px 3px 3px 8px;
+	text-decoration:none;
+	
+}
+
+#left li a:hover, #left li a:hover span {
+		background-color:#FFFFFF;
+		color:#ff1212;
+		text-decoration:none;
+}
+
+/*-----------RIGHT-------------- */
+#right {	 
+	width: 79%; 
+	float:left; 
+	margin-left: 5px;	
+}
+
+
+#right .introduction{	 
+	border: solid 1px #c3e5c1;
+	padding: 5px 15px;
+	background: #f3fff2;
+	display:block;
+}
+
+#show_data {
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+	border: solid 1px #cacaca;
+	
+
+}
+
+#show_data th{
+	background: #4db25b;
+	color: #FFFFFF;
+	font-weight: bold;
+	text-align: center;
+	padding: 3px;
+	margin: 0px;
+}
+
+#show_data tr:hover td { background: #00FF00; }
+
+#show_data td{
+	padding: 3px;
+	margin: 0px;
+	font-size: 11px;
+}
+
+#show_data .rowBlue_01{
+	background: #e4f4e3;
+	padding: 1px 1px 1px 5px;
+	margin: 0px;
+}
+
+#show_data .rowBlue_02{
+	background: #c1dfbf;	
+	padding: 1px 1px 1px 5px;
+	margin: 0px;
+}
+
+/*--------------------------------------------------*/
+#table_form{
+	padding:0px;
+	margin:0px;
+	width:100%;
+	border:0px;
+}
+
+#table_form td{
+	font-family:Tahoma;
+	font-size: 11px;
+}
+
+
+#table_form .rowBlue_01{
+	background: #e4f4e3;
+	padding:3px 5px;
+	margin: 0px;
+	
+}
+
+#table_form .rowBlue_02{
+	background: #c1dfbf;	
+	padding:3px 5px;
+	margin: 0px;
+}
+
+/*******************************************************************************
+  PAGINATION
+*******************************************************************************/
+
+.pagination { border:0; margin:0; padding:0; font-size:10px; font-weight:bold;}
+.pagination a { border:solid 1px #DEDEDE; margin-right:2px; color:#069;}
+.pagination .previous-off, .pagination .next-off, .pagination .off { color:#888888; display:inline-block; font-weight:normal; padding:3px 4px; }
+.pagination .next a,.pagination .previous a { font-weight:bold; border:solid 1px #FFFFFF; }
+.pagination .active{ color:#000000; font-weight:bold; display:inline-block; padding:4px 6px; }
+.pagination a:link, .pagination a:visited { display:inline-block; padding:3px 6px; text-decoration:none; }
+.pagination a:hover{ text-decoration:none; border: 1px solid #999; color:brown; }
+
+/*******************************************************************************/
+
+
+.comment{
+	font-size:8pt;
+	
+}
+#shop_btn_pay{
+ /*background-image:url(../images/public/member/button_2.png);*/
+ background:#e4f4e3;
+ background-repeat:no-repeat; 
+ color:#0684FF;
+ cursor:pointer;
+ border:0px;
+ font-size:11px;
+ padding-bottom:2px;
+ width:94px; 
+}
+
+#shop_btn_pay:hover{
+ color: #ff6000; 
+}
+
+
+.box-content {
+	margin:5px 0px;
+	clear:both;
+}
+
+a.button { 
+	-moz-border-radius:5px;
+	display:inline-block; 
+	border:1px solid #003300;
+	padding:5px 20px;
+	background-color:#669900;
+	color:#FFFFFF;
+	font-weight:bold;
+}
+
+a:hover.button { 
+	-moz-border-radius:5px;
+	display:inline-block; 
+	border:1px solid #003300;
+	padding:5px 20px;
+	background-color:#4db25b;
+	color:#FFFFFF;
+	font-weight:bold;	
+	text-decoration:none;
+}
+
+fieldset {
+	padding:5px; 
+	border:solid 1px #cacaca;
+}
+
+fieldset legend {
+	font-weight: bold; 
+	color: #ea0813;
+	padding:0px 5px;
+}
+
+.required_field {
+	color:#FF0000;
+	font-weight:bold;
+	padding-left:5px;
+}
+
+ul.menu {list-style:none; margin:0; padding:0}
+ul.menu * {margin:0; padding:0}
+ul.menu a {display:block; color:#000; text-decoration:none}
+ul.menu li {position:relative; float:left; margin-right:2px}
+ul.menu ul {position:absolute; top:26px; left:0; background:#d1d1d1; display:none; opacity:0; list-style:none}
+ul.menu ul li {position:relative; border:1px solid #aaa; border-top:none; width:148px; margin:0}
+ul.menu ul li a {display:block; padding:3px 7px 5px; background-color:#d1d1d1}
+ul.menu ul li a:hover {background-color:#c5c5c5}
+ul.menu ul ul {left:148px; top:-1px}
+ul.menu .menulink {border:1px solid #aaa; padding:5px 7px 7px; font-weight:bold; background:url(images/header.gif); width:134px}
+ul.menu .menulink:hover, ul.menu .menuhover {background:url(images/header_over.gif)}
+ul.menu .sub {background:#d1d1d1 url(images/arrow.gif) 136px 8px no-repeat}
+ul.menu .topline {border-top:1px solid #aaa}
+
+/*			<fieldset style="padding: 5px; border: solid 1px #cacaca;">
+				<legend style="font-weight: bold; color: #ea0813">Form add</legend>*/
+
+
+
+/*
+
+.ui-dialog .ui-corner-all {
+-moz-border-radius-bottomleft:0px !important;
+-moz-border-radius-bottomright:0px !important;
+-moz-border-radius-topleft:4px;
+-moz-border-radius-topright:4px;
+}
+
+*/

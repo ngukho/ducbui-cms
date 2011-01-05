@@ -1,0 +1,55 @@
+<? echo $this->render("content/_header.phtml"); ?>
+
+<?php
+	$this->jQuery()->addJavascriptFile($this->getBaseUrl() . '/scripts/ThickBox.js');
+	$this->jQuery()->addStylesheet($this->getBaseUrl() . '/styles/ThickBox.css');
+?>
+
+<form action="<?= $this->currentControllerUrl; ?>/delete-all" id="frmData" name="frmData" method="POST" onsubmit="return CheckDeleteAll();">
+
+<div align="right" class="box-content">
+	<input type="button" onclick="location.href = '<?= $this->currentControllerUrl; ?>/add';" value="<?= $this->getTranslation('Add New'); ?>" class="btn_submit_green add_act"/>	
+	<input type="submit" value="Delete" name="" id="" class="btn_submit_green delete_act"/>
+</div>
+
+<div class="box-content">
+
+	<table id="show_data" width="100%" border="0" cellpadding="0" cellspacing="1">
+	<tr>
+		<th width="2%" align="center"><input id="checkboxAll" name="checkboxAll" onclick="doCheckAll(document.frmData);" type="checkbox"></th>
+		<th width="15%"><?= $this->titleTX ?></th>
+		<th width="15%">Alias</th>
+		<th width="">Html Content</th>
+		<th width="11%">Action</a></th>
+	</tr>
+	<?
+		$i=1;
+		foreach($this->rsContents as $rowContent) :
+	?>
+		<tr class="<?= ($i==1)?' rowBlue_01':'rowBlue_02'; ?>">
+			<td align="center">
+				<input id="checkbox" name="checkbox[]" value="<?= $rowContent->content_id; ?>" onclick="doCheckOne(document.frmData);" type="checkbox"> 
+			</td>
+			<td><?= $this->h($rowContent->title); ?></td>
+			<td><?= $this->h($rowContent->alias); ?></td>
+			<td><?= Digitalus_Toolbox_String::truncateText($this->h($rowContent->html,'view','editor')); ?> ... </td>
+			<td align="center">
+				<a href="<?= $this->currentControllerUrl . '/view-detail/id/' . $rowContent->content_id ?>?height=605&width=1000" class="thickbox" title="<?= $this->h($rowContent->title); ?>">
+					<img border="0" alt="View" src="<?= BASE_IMAGES?>/zoom.png"/>
+				</a>
+				<?= $this->renderStatusLink($rowContent->content_id,$this->currentControllerUrl . '/switch-status/id/' . $rowContent->content_id,$rowContent->active); ?>
+				<?= $this->renderEditLink($this->currentControllerUrl . '/edit/id/' . $rowContent->content_id); ?>
+				<?= $this->renderDeleteLink($this->currentControllerUrl . '/delete/id/' . $rowContent->content_id); ?>
+			</td>
+		</tr>
+						
+	<? 
+			$i=-$i;
+		endforeach;
+	?>			
+	</table>		
+
+</div>
+
+</form>
+

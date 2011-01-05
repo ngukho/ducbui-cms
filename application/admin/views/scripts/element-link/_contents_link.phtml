@@ -1,0 +1,28 @@
+<table id="show_data" width="100%" border="0" cellpadding="0" cellspacing="1">
+	<tr>
+		<th width="15%"><?= $this->getTranslation('Title'); ?></th>
+		<th width="15%"><?= $this->getTranslation('Alias'); ?></th>
+		<th width=""><?= $this->getTranslation('Alias Path'); ?></th>
+		<th width="6%"><?= $this->getTranslation('Select'); ?></a></th>
+	</tr>
+	<?
+		$i=1;
+		foreach($this->rsContents as $rowContent) :
+	?>
+		<tr class="<?= ($i==1)?'rowBlue_01':'rowBlue_02'; ?>">
+			<td style="font-size:12px;"><?= $this->h($rowContent->title); ?></td>
+			<td style="font-size:12px;"><?= $rowContent->alias; ?></td>
+			<td style="font-size:12px;"><?= $rowContent->alias_path; ?></td>
+			<td align="center">
+				<a href='javascript:void(0);' 
+					onclick="parent.chooseLink('<?= $rowContent->alias_path ?>');">
+					<img src='<?= BASE_IMAGES ?>/btnSelect.png' alt='Select' border=0>
+				</a>
+			</td>
+		</tr>		
+						
+	<? 
+			$i=-$i;
+		endforeach;
+	?>			
+</table>		

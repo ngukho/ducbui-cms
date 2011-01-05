@@ -1,0 +1,56 @@
+<? echo $this->render("index/_header.phtml"); ?>
+
+<?php
+	$this->jQuery()->addJavascriptFile($this->getBaseUrl() . '/scripts/ThickBox.js');
+	$this->jQuery()->addStylesheet($this->getBaseUrl() . '/styles/ThickBox.css');
+?>
+
+<div class="box-content">
+	<a href="#TB_inline?height=150&width=400&inlineId=myOnPageContent" 
+			class="btn_green thickbox" title="Show Content ID">Show Content ID</a>	
+
+	
+	<a href="#TB_inline?height=155&width=300&inlineId=hiddenModalContent&modal=true" 
+			class="btn_green thickbox">Modal content</a>	
+	
+	<input alt="http://google.com.vn?TB_iframe=true&height=600&width=1000"
+			type="button" class="btn_submit thickbox" value="  iFrame  " id="submit" name="submit" title="iFrame"/>
+
+</div>
+
+<form action="<?= $this->currentActionUrl; ?>" id="frmGroups" name="frmGroups" method="POST">
+
+	<input alt="#TB_inline?height=300&width=400&inlineId=myOnPageContent"
+			type="button" class="btn_submit thickbox" value="  Save  " id="submit" name="submit" title="add a caption to title attribute / or leave blank"/>
+
+</form>
+
+<!--
+
+<input alt="#TB_inline?height=300&width=400&inlineId=myOnPageContent" title="add a caption to title attribute / or leave blank" class="thickbox" type="button" value="Show" />  
+<a href="#TB_inline?height=155&width=300&inlineId=hiddenModalContent&modal=true" class="thickbox">Show hidden modal content.</a>
+
+<input type="button" value="Show" class="thickbox" title="add a caption to title attribute / or leave blank" alt="#TB_inline?height=150&width=400&inlineId=myOnPageContent"/>
+<a class="thickbox" href="#TB_inline?height=155&width=300&inlineId=hiddenModalContent&modal=true">Show hidden modal content.</a>
+
+<a href="ajax.PHP?keepThis=true&TB_iframe=true&height=250&width=400" title="add a caption to title attribute / or leave blank" class="thickbox">Example 1</a>  
+<a href="ajaxOverFlow.htm?keepThis=true&TB_iframe=true&height=300&width=500" title="add a caption to title attribute / or leave blank" class="thickbox">Example 2</a>
+<a href="iframeModal.html?placeValuesBeforeTB_=savedValues&TB_iframe=true&height=200&width=300&modal=true" title="add a caption to title attribute / or leave blank" class="thickbox">Open iFrame Modal</a>
+
+<a class="thickbox" title="add a caption to title attribute / or leave blank" href="ajaxOverFlow.html?keepThis=true&TB_iframe=true&height=300&width=500">Example 2</a>
+-->
+
+<div id="myOnPageContent" style="display:none">
+	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore 
+	magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl 
+	ut aliquip ex ea commodo consequat.</p>
+	<p><select name=""><option>test</option></select></p>
+</div>
+
+<div id="hiddenModalContent" style="display:none">
+	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet 
+	dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit 
+	lobortis nisl ut aliquip ex ea commodo consequat.</p>
+	<p style="text-align:center">
+	<input type="submit" id="Login" value="&nbsp;&nbsp;Ok&nbsp;&nbsp;" onclick="tb_remove()" /></p>
+</div>

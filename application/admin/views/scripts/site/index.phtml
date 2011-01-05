@@ -1,0 +1,70 @@
+<? $this->render("site/_header.phtml"); ?>
+
+<div class="box-content">
+			
+	<div id="tabs">
+		<ul>
+			<li><a href="#tabs-1">Contact General</a></li>
+			<li><a href="#tabs-2">Global Meta Data</a></li>
+			<li><a href="#tabs-3">Mail Settings</a></li>
+		</ul>
+		<div id="tabs-1">
+			<form action="<?= $this->currentControllerUrl; ?>/edit" method="post" id='general'>
+			<table id="table_form" width="100%" border="0" cellpadding="0" cellspacing="1" >
+			
+			<?php
+	echo $this->formRow("First Name :", $this->formText('setting[first_name]', $this->settings->first_name,array('size'=>35)));
+    echo $this->formRow("Last name", $this->formText('setting[last_name]', $this->settings->last_name,array('size'=>35)));
+	echo $this->formRow("Email :", $this->formText('setting[email]', $this->settings->email,array('size'=>35)));
+    echo $this->formRow("Phone :", $this->formText('setting[phone]', $this->settings->phone,array('size'=>35)));    
+	echo $this->formRow("Address :", $this->formText('setting[address]', $this->settings->address,array('size'=>35)));        
+	echo $this->formRow("Company Name :", $this->formText('setting[company_name]', $this->settings->company_name,array('size'=>35)));
+    echo $this->formRow('&nbsp;', $this->formSubmit('general','Update Contact General Settings',array('class'=>"btn_submit save_act")));
+			?>
+			
+			</table>
+			</form>			
+		</div>
+		
+		<div id="tabs-2">
+			<form action="<?= $this->currentControllerUrl; ?>/edit" method="post" id='meta'>
+			<table id="table_form" width="100%" border="0" cellpadding="0" cellspacing="1" >
+
+			<?php
+	echo $this->formRow("Site Name :", $this->formText('setting[name]', $this->settings->name,array('size'=>35)));
+    echo $this->formRow("Title Separator :", $this->formText('setting[title_separator]', $this->settings->title_separator,array('size'=>35)));
+	echo $this->formRow("Keywords :",$this->formTextarea('setting[meta_keywords]',$this->settings->meta_keywords,array('rows'=>'8','cols'=>'60')),null,null,true);	
+	echo $this->formRow("Description :",$this->formTextarea('setting[meta_description]',$this->settings->meta_description,array('rows'=>'8','cols'=>'60')),null,null,true);		
+	echo $this->formRow("Site is online :",$this->formCheckbox('setting[online]', intval($this->settings->online)));	
+    echo $this->formRow('&nbsp;', $this->formSubmit('meta','Update Metadata Settings',array('class'=>"btn_submit save_act")));
+			?>			
+			
+			</table>
+			</form>					
+		</div>
+		<div id="tabs-3">
+			<form action="<?= $this->currentControllerUrl; ?>/edit" method="post" id='mail'>
+			<table id="table_form" width="100%" border="0" cellpadding="0" cellspacing="1" >
+			
+			<?php
+	echo $this->formRow("Default Mail Address  :", $this->formText('setting[default_email]', $this->settings->default_email,array('size'=>35)));
+    echo $this->formRow("Default Mail Sender :", $this->formText('setting[default_email_sender]', $this->settings->default_email_sender,array('size'=>35)));
+	echo $this->formRow("Use SMTP Transport :",$this->formCheckbox('setting[use_smtp_mail]', intval($this->settings->use_smtp_mail)));	
+	echo $this->formRow("SMTP Host :", $this->formText('setting[smtp_host]', $this->settings->smtp_host,array('size'=>35)));
+    echo $this->formRow("SMTP Username :", $this->formText('setting[smtp_username]', $this->settings->smtp_username,array('size'=>35)));
+    echo $this->formRow("SMTP Password :", $this->formText('setting[smtp_password]', $this->settings->smtp_password,array('size'=>35)));
+    echo $this->formRow('&nbsp;', $this->formSubmit('mail','Update Mail Settings',array('class'=>"btn_submit save_act")));
+			?>			
+						
+			</table>
+			</form>					
+		</div>
+	</div>		
+	
+</div>
+
+<script type="text/javascript">
+	$(function() {
+		$("#tabs").tabs();
+	});
+</script>

@@ -1,0 +1,70 @@
+<form action="<?= $this->currentActionUrl; ?>" id="frmProTypes" name="frmProTypes" method="POST" enctype="multipart/form-data">
+<input type="hidden" name="type_id" value="<?= $this->rowType->type_id; ?>">
+<input type="hidden" name="default_image" value="<?= $this->rowType->default_image; ?>">
+<div align="right" class="box-content">
+
+	<fieldset>
+			<legend>Form <?= $this->title_action; ?></legend>
+			
+			<table id="table_form" width="100%" border="0" cellpadding="0" cellspacing="1" >
+			
+			<?php
+				echo $this->FormRow("Product Type Name :",$this->formText('name',$this->h($this->rowType->name,'edit'),array('class'=>'required','size'=>60)),true);
+				echo $this->FormRow("Type Handler :",$this->formText('type_handler',$this->h($this->rowType->type_handler,'edit'),array('class'=>'required','size'=>60)),true);
+				echo $this->FormRow("This Product can be added to cart :",$this->formCheckbox('allow_add_to_cart', intval($this->rowType->allow_add_to_cart)));				
+				$image_html = '';
+				$class_css = 'rowBlue_02';
+				if(!empty($this->rowType->default_image))
+				{
+					$class_css .= ' align_top';
+					$image_html .= "<br><br>";
+					$image_html .= "<img style='padding-right:5px;' border=0 src='" . BASE_URL . '/' . DIR_UPLOAD_MEDIA .  "/{$this->rowType->default_image}' width='100' id='img_status_2'>";
+					$image_html .= "&nbsp;&nbsp;<a class='base' onclick='deleteRow(\"" . $this->currentControllerUrl . '/delete-image/id/' . $this->rowType->type_id . "\",\"Do you want to delete this image ?\")' href='javascript:void(0);'>Delete Image</a>";
+				}				
+			?>
+				<tr>
+					<td class="<?= $class_css; ?>"><label>Default Image :</label></td>
+					<td class="rowBlue_01">
+						<input type="file" id="field_default_image" name="field_default_image">
+						<?php
+							if(!empty($image_html)) echo $image_html;
+						?>
+					</td>
+				</tr>			
+			
+			<?php				
+				$button_control = $this->formSubmit('submit','  Save  ',array('class'=>'btn_submit'));
+				$button_control .= '&nbsp' . $this->formButton('cancel','Cancel',array('class'=>'btn_submit','onclick'=>"location.href = '{$this->currentControllerUrl}'"));
+				echo $this->FormRow('&nbsp;',$button_control);
+			?>
+
+			</table>
+				
+	</fieldset>
+
+</div>
+
+</form>
+
+<script language="JavaScript">
+$(document).ready(function(){
+    $("#frmProTypes").validate();
+});
+
+//$().ready(function() {
+//	
+//	// validate signup form on keyup and submit
+//	$("#frmParams").validate({
+//		rules: {
+//			name: "required",
+//			value: "required"
+//		},
+//		messages: {
+//			name: "Please enter key name !",
+//			value: "Please enter param value"
+//		}
+//	});
+//
+//});
+
+</script>
